@@ -1,0 +1,115 @@
+import React from "react";
+import { HomeBanner } from "./components/HomeBanner";
+import HeroSection from "../../components/HeroSections/HeroSection";
+
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import ContactSection from "./components/ContactSection";
+import Testimonal from "../../components/Testimonal/Testimonal";
+import BrandSection from "./components/BrandSection";
+import ExpertiseSection from "./components/ExpertiseSection";
+import VideoSection from "./components/Video";
+import PortfolioSection from "./components/PortfolioSection";
+
+import HeroImage from "../../assets/Images/HeroImage.png";
+import HeroIcon from "../../assets/messure.svg";
+
+const Home = (props) => {
+  return (
+    <main>
+      {/* Home Banner**** */}
+      <section>
+        <HomeBanner />
+      </section>
+
+      {/* Project Section***** */}
+      <section className="layout-section">
+        <HeroSection
+          Details={{
+            Heading1: "ABOUT US",
+            Heading2: "Complete Design, Build and Turnkey Projects.",
+            Heading3: "20+ Years of Renovating Experience",
+            Para: "Welcome to a world of innovative design, safety, and client-centric excellence. Bijliwala Contractors Canada is a company that began its journey in 2000 with a simple vision-to transform ordinary spaces into extra ordinary living. From cafe transformations to restaurant upgrades, our impact is felt all over.",
+            Icon: HeroIcon,
+            Image: HeroImage,
+            Button: "KNOW MORE",
+          }}
+        />
+      </section>
+
+      {/* Expertise Section***** */}
+      <section className="layout-section">
+        <ExpertiseSection />
+      </section>
+
+      {/* Dream Projcet *** */}
+      <section className="layout-section">
+        <div className="max-width">
+          <div className="flex lg:flex-row flex-col gap-8 justify-between items-center">
+            <div className="lg:w-[80%] w-[100%] flex flex-col gap-3">
+              <h2 className="heading-h2">WE ARE</h2>
+              <h3 className="heading-h3 leading-[4rem] font-bold">
+                Building dream projects in a{" "}
+                <span className="text-[#8e7861]">budget.</span>
+              </h3>
+              <p className="para">
+                We're not just certified; we're WHMIS Certified. Trust our Red
+                Seal-certified tradesmen, true artisans who bring your vision to
+                life, creating spaces that leave a lasting impression. At
+                Bijliwala Contractors Canada, your dream space begins with
+                Accident Assurance—where safety and style collide.
+              </p>
+            </div>
+            <div>
+              <button className="common-btn">Contact us</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section***** */}
+      <section className="layout-section">
+        <VideoSection />
+      </section>
+
+      {/* Portfolio Section***** */}
+      <section className="layout-section">
+        <SectionHeading
+          Heading1={" OUR WORK"}
+          Heading2={"Creative Portfolio Designs"}
+        />
+        <div className="mt-20">
+          <PortfolioSection />
+        </div>
+      </section>
+
+      {/* Contact Section***** */}
+      <section className="layout-section">
+        <ContactSection />
+      </section>
+
+      {/* Testimonal Section******* */}
+      <section className="layout-section">
+        <SectionHeading
+          Heading1={"TESTIMONIALS"}
+          Heading2={"Happy Client Experiences"}
+        />
+        <div className="md:mt-20 mt-10 md:px-0 px-4">
+          <Testimonal />
+        </div>
+      </section>
+
+      {/* Brands Section***** */}
+      <section className="layout-section">
+        <SectionHeading
+          Heading1={"OUR SUCCESSFUL COLLABORATIONS"}
+          Heading2={"Partners who trust us "}
+        />
+        <div className="md:mt-20 mt-10">
+          <BrandSection />
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default Home;
