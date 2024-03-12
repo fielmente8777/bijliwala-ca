@@ -13,38 +13,27 @@ body {
    background-color: var(--primary-black);
    color: var(--primary-white);
 }
-.heading-h2{
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  color: var(--primary-gray);
-  font-weight: 500;
+
+// Default setting for number input
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.heading-h3{
-  font-size: 3.2rem;
-  line-height: 4rem;
-  font-weight: 700;
-  @media (width<768px) {
-    font-size: 2.2rem;
-    line-height: 3.4rem;
-  }
-}
-
-.para{
- font-size: 1.6rem;
- font-weight: 400;
- line-height: 2.4rem;
- color: var(--secondary-white);
- @media (width<=600px) {
-  font-size: 1.4rem;
- }
-}
 
 .max-width{
   max-width: 1240px;
   margin : 0 auto;
   @media (width<=1240px) {
       padding: 0 1.4rem;
+  }
+}
+
+.layout-section{
+  padding: 4rem 0;
+  @media (width<768px) {
+     padding: 2.4rem 0;
   }
 }
 
@@ -79,14 +68,40 @@ body {
   font-size: 5.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--primary-white);
+  color: var(--primary-white); 
+
+  @media (width<768px) {
+     font-size: 2.5rem;
+  }
+
 }
 
-.layout-section{
-  padding: 4rem 0;
+.heading-h2{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--primary-gray);
+  font-weight: 500;
+}
+
+.heading-h3{
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 700;
   @media (width<768px) {
-     padding: 2.4rem 0;
+    font-size: 2rem;
+    line-height: 3.4rem;
   }
+}
+
+.para{
+ font-size: 1.6rem;
+ font-weight: 400;
+ line-height: 2.4rem;
+ color: var(--secondary-white);
+ @media (width<=600px) {
+  font-size: 1.4rem;
+  text-align: justify;
+ }
 }
 
 .common-btn{
@@ -101,5 +116,29 @@ body {
     font-size: 1.3rem;
   }
 }
+
+// Swiper bulltes customization*****
+.swiper-pagination-bullets{
+  width: fit-content !important;
+  .swiper-pagination-bullet{
+     width: 20px;
+     height: 1.4px;
+     border-radius: 0;
+     background-color: white;
+     @media (width<=600px) {
+       width: 10px;
+     }
+  }
+  .swiper-pagination-bullet-active{
+    width: 48px;
+    height: 2px;
+    border-radius: 0;
+    background-color: white;
+    @media (width<=600px) {
+      width: 20px;
+    }
+ }
+}
+
 
 

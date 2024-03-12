@@ -2,11 +2,27 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import arrowLeft from "../../assets/svg/arrowleft.svg";
+import arrowRight from "../../assets/svg/arrowright.svg";
 
 const Testimonal = () => {
   return (
     <div>
       <Swiper
+        loop={true}
+        autoplay={{
+          delay: 4000,
+        }}
+        pagination={{
+          el: "#bullets-Portfolio",
+        }}
+        navigation={{
+          prevEl: ".prev-btn",
+          nextEl: ".next-btn",
+        }}
+        modules={[Pagination, Autoplay, Navigation]}
         breakpoints={{
           768: {
             slidesPerView: 2,
@@ -52,6 +68,29 @@ const Testimonal = () => {
           );
         })}
       </Swiper>
+
+      {/* swiper button and pagination customization***** */}
+      <div className="md:mt-16 mt-5 flex items-center gap-5 justify-center">
+        {/* left arrow*** */}
+        <div className="md:w-[35px] w-[22px] cursor-pointer prev-btn">
+          <img
+            src={arrowLeft}
+            alt="arrow-left-vecotr"
+            className="w-full h-full"
+          />
+        </div>
+        {/* indicators***** */}
+        <span id="bullets-Portfolio"></span>
+
+        {/* right arrows***** */}
+        <div className="md:w-[35px] w-[22px] cursor-pointer next-btn">
+          <img
+            src={arrowRight}
+            alt="arrow-right-vecotr"
+            className="w-full h-full"
+          />
+        </div>
+      </div>
     </div>
   );
 };

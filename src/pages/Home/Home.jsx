@@ -13,7 +13,7 @@ import PortfolioSection from "./components/PortfolioSection";
 import HeroImage from "../../assets/Images/HeroImage.png";
 import HeroIcon from "../../assets/messure.svg";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <main>
       {/* Home Banner**** */}
@@ -96,6 +96,23 @@ const Home = (props) => {
         <div className="md:mt-20 mt-10 md:px-0 px-4">
           <Testimonal />
         </div>
+      </section>
+
+      <section>
+        <div className="max-width">
+          {/* <iframe
+            src="https://widgets.sociablekit.com/instagram-feed/iframe/25379950"
+            frameborder="0"
+            width="100%"
+            height="650px"
+          /> */}
+        </div>
+        {/* <div class="sk-instagram-feed" data-embed-id="25379950"></div>
+        <script
+          src="https://widgets.sociablekit.com/instagram-feed/widget.js"
+          async
+          defer
+        ></script> */}
       </section>
 
       {/* Brands Section***** */}

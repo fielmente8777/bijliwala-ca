@@ -1,10 +1,40 @@
 import React from "react";
 import Logo from "../../assets/logo 2.svg";
+import { Link, NavLink } from "react-router-dom";
+import facebook from "../../assets/svg/facebook.svg";
+import bijli from "../../assets/svg/bijli.svg";
+import instagram from "../../assets/svg/instagram.svg";
+import twitter from "../../assets/svg/twitter.svg";
+
+const SocialIcons = [facebook, bijli, instagram, twitter];
+
+const Nav_Links = [
+  {
+    linkName: "Home",
+    src: "/",
+  },
+  {
+    linkName: "About",
+    src: "/About",
+  },
+  {
+    linkName: "Work",
+    src: "/Work",
+  },
+  {
+    linkName: "Blog",
+    src: "/Blogs",
+  },
+  {
+    linkName: "Contact",
+    src: "/Contact",
+  },
+];
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center items-center ">
-      <div className="flex flex-1 max-width bg-[#1E1E1E] gap-5 justify-between text-center text-white whitespace-nowrap border-b-0 border-solid border-white border-opacity-30 max-md:flex-wrap">
+    <header className="py-5">
+      <div className="flex justify-between items-center max-width border-b border-b-gray-700">
         <div className="flex gap-5 text-sm font-medium tracking-wide leading-6 max-md:flex-wrap max-md:max-w-full">
           <img
             loading="lazy"
@@ -12,27 +42,49 @@ const Navbar = () => {
             className="shrink-0 aspect-[1.33] w-[91px]"
           />
         </div>
-        <div className="flex gap-5 justify-between pr-5 my-auto max-md:flex-wrap max-md:max-w-full">
-          <div>HOME</div>
-          <div>ABOUT</div>
-          <div>WORK</div>
-          <div>BLOG</div>
-          <div>CONTACT</div>
-        </div>
+        <ul className="flex  gap-10">
+          {Nav_Links.map((Links, index) => {
+            return (
+              <li key={index}>
+                <NavLink
+                  className="text-[1.4rem] uppercase font-medium hover:text-[#8E7861]"
+                  to={Links.src}
+                  style={{
+                    borderRight:
+                      index != Nav_Links.length - 1
+                        ? "2px solid #473C30"
+                        : "0px solid #473C30",
+                    paddingRight: "1.2rem",
+                  }}
+                >
+                  {Links.linkName}
+                </NavLink>
+              </li>
+            );
+          })}
+          {/* <Link to="/">HOME</Link>
+          <Link to="/About">ABOUT</Link>
+          <Link to="/Work">WORK</Link>
+          <Link to="/Blogs">BLOG</Link>
+          <Link to="/Contact">CONTACT</Link> */}
+        </ul>
         <div className="flex gap-2 px-5 my-auto text-xs leading-3 uppercase">
-          <div className="grow justify-center px-3.5 py-3 rounded-2xl border border-solid border-white border-opacity-10"></div>
-          <div className="grow justify-center px-3 py-3.5 rounded-2xl border border-solid border-white border-opacity-10">
-            
-          </div>
-          <div className="grow justify-center p-3 rounded-2xl border border-solid border-white border-opacity-10">
-            
-          </div>
-          <div className="grow justify-center px-3 py-3.5 rounded-2xl border border-solid border-white border-opacity-10">
-            
-          </div>
+          {SocialIcons.map((Icons) => {
+            return (
+              <Link className="w-[40px] h-[40px] border border-gray-700 rounded-full flex justify-center  items-center hover:bg-[#8E7861]">
+                <div className="w-[12px]">
+                  <img
+                    src={Icons}
+                    alt={`${Icons}-vector`}
+                    className="w-full h-full"
+                  />
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

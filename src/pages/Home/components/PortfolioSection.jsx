@@ -1,5 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import arrowLeft from "../../../assets/svg/arrowleft.svg";
+import arrowRight from "../../../assets/svg/arrowright.svg";
 
 import Portfolio1 from "../../../assets/Images/portfolio1.png";
 import Portfolio2 from "../../../assets/Images/portfolio2.png";
@@ -21,12 +25,34 @@ const Portfolio = [
     Heading2: "Club Kolkata",
     Image: Portfolio3,
   },
+  {
+    Heading1: "CLUB",
+    Heading2: "Club Kolkata",
+    Image: Portfolio2,
+  },
+  {
+    Heading1: "CLUB",
+    Heading2: "Club Kolkata",
+    Image: Portfolio3,
+  },
 ];
 
 const PortfolioSection = () => {
   return (
     <div>
       <Swiper
+        loop={true}
+        autoplay={{
+          delay: 4000,
+        }}
+        pagination={{
+          el: ".bullets",
+        }}
+        navigation={{
+          prevEl: ".prev-btn",
+          nextEl: ".next-btn",
+        }}
+        modules={[Pagination, Autoplay, Navigation]}
         breakpoints={{
           768: {
             slidesPerView: 2,
@@ -67,6 +93,29 @@ const PortfolioSection = () => {
           );
         })}
       </Swiper>
+
+      {/* swiper button and pagination customization***** */}
+      <div className="md:mt-16 mt-5 flex items-center gap-5 justify-center">
+        {/* left arrow*** */}
+        <div className="md:w-[35px] w-[22px] cursor-pointer prev-btn">
+          <img
+            src={arrowLeft}
+            alt="arrow-left-vecotr"
+            className="w-full h-full"
+          />
+        </div>
+        {/* indicators***** */}
+        <span className="bullets"></span>
+
+        {/* right arrows***** */}
+        <div className="md:w-[35px] w-[22px] cursor-pointer next-btn">
+          <img
+            src={arrowRight}
+            alt="arrow-right-vecotr"
+            className="w-full h-full"
+          />
+        </div>
+      </div>
     </div>
   );
 };

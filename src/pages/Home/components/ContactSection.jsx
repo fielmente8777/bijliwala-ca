@@ -44,6 +44,7 @@ const ContactSection = () => {
                     </div>
                     <input
                       type="text"
+                      required
                       className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                       placeholder="Your Name*"
                     />
@@ -56,6 +57,7 @@ const ContactSection = () => {
                     </div>
                     <input
                       type="number"
+                      required
                       className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                       placeholder="Your Phone Number*"
                     />
@@ -71,7 +73,8 @@ const ContactSection = () => {
                       <IoMailOpen className="text-[1.6rem] text-[#8E7861]" />
                     </div>
                     <input
-                      type="text"
+                      type="email"
+                      required
                       className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                       placeholder="Your Email*"
                     />
@@ -83,7 +86,8 @@ const ContactSection = () => {
                       <FaLocationDot className="text-[1.6rem] text-[#8E7861]" />
                     </div>
                     <input
-                      type="number"
+                      type="text"
+                      required
                       className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                       placeholder="Address*"
                     />
@@ -100,6 +104,7 @@ const ContactSection = () => {
                     </div>
                     <textarea
                       type="text"
+                      required
                       rows={4}
                       className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                       placeholder="Message*"

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-[#1B1B1B] layout-section">
       <div className="max-width">
         <div className="max-md:mr-2.5 max-md:max-w-full">
-          <div className="flex gap-20 max-md:flex-col max-md:gap-0">
+          <div className="flex gap-20 max-md:flex-col max-md:gap-0 ">
             <div className="flex flex-col w-[18%]  items-center  max-md:ml-0 max-md:w-full">
               <div className="flex flex-col text-base leading-6 max-md:mt-10">
                 <img
@@ -16,7 +16,9 @@ const Footer = () => {
                   className="self-center aspect-[1.33] w-[190px]"
                 />
                 <div className="mt-4">
-                  <p>Lorem Ipsum is simply dummy text.</p>
+                  <p className="text-[1.5rem]">
+                    Lorem Ipsum is simply dummy text.
+                  </p>
                 </div>
               </div>
             </div>
@@ -32,7 +34,9 @@ const Footer = () => {
                     className="shrink-0 my-auto w-7 aspect-square"
                   />
                   <div>
-                    <p>219 Gardenbrooke Trail, Brampton, Ontario, L6P3C9</p>{" "}
+                    <p className="text-[1.5rem]">
+                      219 Gardenbrooke Trail, Brampton, Ontario, L6P3C9
+                    </p>{" "}
                   </div>
                 </div>
                 <div className="flex gap-3 mt-4">
@@ -42,7 +46,7 @@ const Footer = () => {
                     className="shrink-0 w-7 aspect-square"
                   />
                   <div className="flex-auto my-auto">
-                    <p>416-407-7755</p>
+                    <p className="text-[1.5rem]">416-407-7755</p>
                   </div>
                 </div>
                 <div className="flex gap-3 mt-4 text-neutral-400">
@@ -52,7 +56,7 @@ const Footer = () => {
                     className="shrink-0 w-7 aspect-square"
                   />
                   <div className="grow my-auto">
-                    <p>lagancontractor@gmail.com </p>
+                    <p className="text-[1.5rem]">lagancontractor@gmail.com </p>
                   </div>
                 </div>
               </div>
@@ -62,27 +66,27 @@ const Footer = () => {
                 <div className="text-[24px] font-[700] leading-[28px]">
                   <h3>Navigation</h3>
                 </div>
-                <Link className="mt-4">
+                <Link className="mt-4 text-[1.5rem]">
                   <p className=" hover:text-[#8E7861] transition-colors duration-300">
                     Home
                   </p>
                 </Link>
-                <Link className="mt-3  ">
+                <Link className="mt-3 text-[1.5rem]  ">
                   <p className="hover:text-[#8E7861] transition-colors duration-300">
                     About
                   </p>
                 </Link>
-                <Link className="mt-3 ">
+                <Link className="mt-3 text-[1.5rem] ">
                   <p className=" hover:text-[#8E7861] transition-colors duration-300">
                     Work
                   </p>
                 </Link>
-                <Link className="mt-3 ">
+                <Link className="mt-3 text-[1.5rem] ">
                   <p className=" hover:text-[#8E7861] transition-colors duration-300">
                     Blog
                   </p>
                 </Link>
-                <Link className="mt-3 ">
+                <Link className="mt-3 text-[1.5rem] ">
                   <p className=" hover:text-[#8E7861] transition-colors duration-300">
                     Contact
                   </p>
@@ -96,7 +100,7 @@ const Footer = () => {
                 </div>
                 <div className="flex gap-5 justify-between pl-3 mt-4 text-base leading-6 text-justify border border-solid border-stone-700 text-neutral-400 max-md:pl-5">
                   <div className="flex-auto my-auto">
-                    <p>Your Email Address*</p>
+                    <p className="text-[1.5rem]">Your Email Address*</p>
                   </div>
                   <img
                     loading="lazy"
@@ -169,30 +173,35 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         <div className="mt-10" />
-        <div className="flex gap-5 justify-between mt-10 text-xs leading-5 max-md:flex-wrap max-md:mt-10 max-md:mr-2.5 max-md:max-w-full">
+        <div className="flex gap-5 justify-between mt-10 text-xs leading-5 max-md:flex-wrap max-md:mt-10   max-md:mr-2.5 max-md:max-w-full">
           <div className="flex gap-2">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1d39c014e943070322622bcd86f28622feddbd44fe8f90d727c57aedd727d36?"
               className="shrink-0 my-auto w-3 aspect-square"
             />
-            <div className="flex-auto">
+            <div className="flex-auto text-[1.5rem]">
               <p>
                 Design & Developed by{" "}
                 <Link to="https://eazotel.com/">Eazotel</Link>
               </p>
             </div>
-            <div className="grow whitespace-nowrap">
+            <div className="text-[1.5rem]">
               <p>All Rights Reserved</p>
             </div>
           </div>
           <div className="flex gap-5 justify-betwee">
             <div>
-              <p>Privacy Policy</p>
+              <Link to="/Privacy" className="text-[1.5rem]">
+                Privacy Policy
+              </Link>
             </div>
             <div className="flex-auto">
-              <p>Terms & Conditions</p>
+              <Link to="Terms" className="text-[1.5rem]">
+                Terms & Conditions
+              </Link>
             </div>
           </div>
         </div>
