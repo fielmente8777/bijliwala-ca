@@ -18,9 +18,9 @@ export const Contact = () => {
 
       <section className="layout-section">
         <div className="max-width">
-          <div className="flex md:flex-row flex-col gap-12">
+          <div className="flex md:flex-row flex-col gap-[10rem]">
             {/* detials section**** */}
-            <div className="lg:w-[65%] md:w-[50%]">
+            <div className="lg:w-[60%] md:w-[50%]">
               <div>
                 <h2 className="heading-h3">Starting a New Project?</h2>
                 <div className="flex flex-col gap-4 mt-10">
@@ -52,9 +52,9 @@ export const Contact = () => {
             </div>
 
             {/* form section**** */}
-            <div className="lg:w-[35%] md:w-[50%]">
-              <form className="border border-[#8E7861] p-8">
-                <h2 className="heading-h2 !text-white ">Lorem Ipsum</h2>
+            <div className="lg:w-[40%] md:w-[50%]">
+              <form className="border border-[#8E7861] px-12 py-10 font-bold">
+                <h2 className="heading-h3 !text-white ">Get in <span className="text-[#8E7861] text">touch</span></h2>
                 <div className="mt-5 flex flex-col gap-5">
                   {/* Name And Phone*** */}
                   <div className="grid sm:grid-cols-1 gap-5 w-full">
@@ -67,7 +67,7 @@ export const Contact = () => {
                           type="text"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-                          placeholder="Your Name*"
+                          placeholder="Your Name"
                         />
                       </div>
                     </div>
@@ -80,7 +80,7 @@ export const Contact = () => {
                           type="number"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-                          placeholder="Your Phone Number*"
+                          placeholder="Your Phone Number"
                         />
                       </div>
                     </div>
@@ -97,7 +97,7 @@ export const Contact = () => {
                           type="email"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-                          placeholder="Your Email*"
+                          placeholder="Your Email"
                         />
                       </div>
                     </div>
@@ -110,7 +110,7 @@ export const Contact = () => {
                           type="text"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-                          placeholder="Address*"
+                          placeholder="Address"
                         />
                       </div>
                     </div>
@@ -128,7 +128,7 @@ export const Contact = () => {
                           required
                           rows={4}
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-                          placeholder="Message*"
+                          placeholder="Message"
                         />
                       </div>
                     </div>
@@ -136,7 +136,7 @@ export const Contact = () => {
                 </div>
                 <div className="mt-6">
                   <button className="common-btn">
-                    GET AN ONSITE INSPECTION
+                    Submit
                   </button>
                 </div>
               </form>

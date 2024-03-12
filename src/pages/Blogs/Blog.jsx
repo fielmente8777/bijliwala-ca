@@ -52,7 +52,7 @@ const Blog = () => {
           <h3 className="heading-h3">
             Lorem Ipsum is a <span className="text-[#8E7861]">Demo Text </span>
           </h3>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 md:mt-20 mt-10">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 md:mt-20 mt-10">
             {Blogs.map((details) => {
               return <BlogsCard Details={details} />;
             })}
