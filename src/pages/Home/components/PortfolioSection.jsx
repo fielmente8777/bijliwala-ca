@@ -9,6 +9,8 @@ import Portfolio1 from "../../../assets/Images/portfolio1.png";
 import Portfolio2 from "../../../assets/Images/portfolio2.png";
 import Portfolio3 from "../../../assets/Images/portfolio3.png";
 
+import { MdArrowRightAlt } from "react-icons/md";
+
 const Portfolio = [
   {
     Heading1: "RETAIL OUTLET",
@@ -80,11 +82,13 @@ const PortfolioSection = () => {
                     <h2 className="text-[1.6rem] font-medium text-center uppercase">
                       {Portfolio.Heading1}
                     </h2>
-                    <h3 className="text-[2.4rem] font-bold">
+                    <h3 className="text-[2.4rem] font-bold text-center">
                       {Portfolio.Heading2}
                     </h3>
                     <div className="flex justify-center mt-5">
-                      <button className="common-btn">View Details</button>
+                      <button className="common-btn flex items-center gap-5">
+                        View Details <MdArrowRightAlt size={25} />
+                      </button>
                     </div>
                   </div>
                 </div>

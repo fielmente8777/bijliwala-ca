@@ -13,6 +13,8 @@ import PortfolioSection from "./components/PortfolioSection";
 import HeroImage from "../../assets/Images/HeroImage.png";
 import HeroIcon from "../../assets/messure.svg";
 
+import { MdArrowRightAlt } from "react-icons/md";
+
 const Home = () => {
   return (
     <main>
@@ -59,8 +61,10 @@ const Home = () => {
                 Accident Assurance—where safety and style collide.
               </p>
             </div>
-            <div>
-              <button className="common-btn">Contact us</button>
+            <div className="lg:w-[20%] flex justify-end">
+              <button className="common-btn flex items-center gap-5">
+                Contact us <MdArrowRightAlt size={25} />
+              </button>
             </div>
           </div>
         </div>
@@ -93,7 +97,7 @@ const Home = () => {
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
         />
-        <div className="md:mt-20 mt-10 md:px-0 px-4">
+        <div className="max-width md:!mt-20 !mt-10">
           <Testimonal />
         </div>
       </section>

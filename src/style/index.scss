@@ -112,9 +112,13 @@ input::-webkit-inner-spin-button {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 500;
+  &:active{
+    scale: 0.9;
+  }
   @media (width<600px) {
     font-size: 1.3rem;
   }
+  
 }
 
 // Swiper bulltes customization*****

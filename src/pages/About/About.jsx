@@ -19,6 +19,8 @@ import Img2 from "../../assets/Images/Teamimg2.png";
 import Img3 from "../../assets/Images/Teamimg3.png";
 import Img4 from "../../assets/Images/Teamimg4.png";
 
+import { MdArrowRightAlt } from "react-icons/md";
+
 const Details = [
   {
     Icon: listen,
@@ -120,7 +122,9 @@ const About = () => {
           </div>
 
           <div className="flex justify-center md:mt-20 mt-10">
-            <button className="common-btn">GET AN ONSITE INSPECTION</button>
+            <button className="common-btn flex items-center justify-center">
+              GET AN ONSITE INSPECTION <MdArrowRightAlt size={25} />
+            </button>
           </div>
         </div>
       </section>

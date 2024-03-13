@@ -1,4 +1,5 @@
 import React from "react";
+import { MdArrowRightAlt } from "react-icons/md";
 
 const HeroSection = ({ Details }) => {
   return (
@@ -44,7 +45,9 @@ const HeroSection = ({ Details }) => {
           )}
 
           <div className="mt-8">
-            <button className="common-btn">{Details.Button}</button>
+            <button className="common-btn flex items-center gap-5">
+              {Details.Button} <MdArrowRightAlt size={25} />
+            </button>
           </div>
         </div>
       </div>

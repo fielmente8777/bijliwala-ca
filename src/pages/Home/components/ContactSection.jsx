@@ -2,7 +2,9 @@ import React from "react";
 
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { IoMailOpen } from "react-icons/io5";
-import { FaLocationDot, FaMessage, aMessage } from "react-icons/fa6";
+import { FaLocationDot, FaMessage } from "react-icons/fa6";
+
+import { MdArrowRightAlt } from "react-icons/md";
 
 const ContactSection = () => {
   return (
@@ -114,7 +116,9 @@ const ContactSection = () => {
               </div>
             </div>
             <div className="mt-6">
-              <button className="common-btn">GET AN ONSITE INSPECTION</button>
+              <button className="common-btn flex items-center gap-5">
+                GET AN ONSITE INSPECTION <MdArrowRightAlt size={25} />
+              </button>
             </div>
           </form>
         </div>

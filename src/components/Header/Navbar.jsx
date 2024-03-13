@@ -42,7 +42,7 @@ const Navbar = () => {
             className="shrink-0 aspect-[1.33] w-[91px]"
           />
         </div>
-        <ul className="flex  gap-10">
+        <ul className="hidden lg:flex gap-10">
           {Nav_Links.map((Links, index) => {
             return (
               <li key={index}>

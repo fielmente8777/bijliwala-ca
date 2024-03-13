@@ -6,6 +6,8 @@ import workImg1 from "../../assets/Images/portfolio2.png";
 import workImg2 from "../../assets/Images/portfolio3.png";
 import workImg3 from "../../assets/Images/portfolio1.png";
 
+import { MdArrowRightAlt } from "react-icons/md";
+
 const Wroks = [
   {
     Heading1: "CLUB",
@@ -80,7 +82,9 @@ const OurWork = () => {
                     </div>
 
                     <div>
-                      <button className="common-btn">contact us</button>
+                      <button className="common-btn flex items-center gap-3">
+                        contact us <MdArrowRightAlt size={25} />
+                      </button>
                     </div>
                   </div>
                 </div>
