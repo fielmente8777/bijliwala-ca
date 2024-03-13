@@ -56,7 +56,9 @@ export const Contact = () => {
             {/* form section**** */}
             <div className="lg:w-[35%] md:w-[50%]">
               <form className="border border-[#8E7861] p-8">
-                <h2 className="heading-h2 !text-white ">Lorem Ipsum</h2>
+                <h2 className="heading-h2 !text-white !capitalize ">
+                  Get in <span className="text-[#8E7861]">Touch</span>
+                </h2>
                 <div className="mt-5 flex flex-col gap-5">
                   {/* Name And Phone*** */}
                   <div className="grid sm:grid-cols-1 gap-5 w-full">
@@ -138,7 +140,7 @@ export const Contact = () => {
                 </div>
                 <div className="mt-6">
                   <button className="common-btn flex items-center gap-3">
-                    GET AN ONSITE INSPECTION <MdArrowRightAlt size={25} />
+                    SUBMIT <MdArrowRightAlt size={25} />
                   </button>
                 </div>
               </form>

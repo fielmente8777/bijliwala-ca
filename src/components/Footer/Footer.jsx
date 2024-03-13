@@ -61,7 +61,8 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[12%] ml-5 max-md:ml-0 max-md:w-full">
+
+            <div className="flex flex-col w-[20%] ml-5 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col py-0.5 text-base leading-6 whitespace-nowrap max-md:mt-10">
                 <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px]">
                   <h3>Navigation</h3>
@@ -93,7 +94,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col w-[40%] justify-start max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-[32%] justify-start max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow max-md:mt-10">
                 <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px]">
                   <h3>Subscribe to our Newsletter</h3>
