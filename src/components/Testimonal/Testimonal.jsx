@@ -7,6 +7,9 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import arrowLeft from "../../assets/svg/arrowleft.svg";
 import arrowRight from "../../assets/svg/arrowright.svg";
 
+import "swiper/css";
+import "swiper/css/pagination";
+
 const Testimonal = () => {
   return (
     <div>
@@ -33,7 +36,6 @@ const Testimonal = () => {
             spaceBetween: 20,
           },
         }}
-        className="px-36"
       >
         {new Array(5).fill("").map(() => {
           return (

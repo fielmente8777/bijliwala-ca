@@ -3,6 +3,8 @@ import bannerImg from "../../../assets/Images/HomeBannerImage.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 import arrowLeft from "../../../assets/svg/arrowleft.svg";
 import arrowRight from "../../../assets/svg/arrowright.svg";
@@ -28,7 +30,6 @@ export const HomeBanner = () => {
               nextEl: ".next-btn",
             }}
             modules={[Pagination, Autoplay, Navigation]}
-            className="px-36"
           >
             {new Array(3).fill("").map(() => {
               return (

@@ -65,7 +65,6 @@ const PortfolioSection = () => {
             spaceBetween: 20,
           },
         }}
-        className="px-36"
       >
         {Portfolio.map((Portfolio) => {
           return (
