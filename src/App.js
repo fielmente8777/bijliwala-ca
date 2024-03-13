@@ -11,6 +11,7 @@ import Terms from "./pages/Terms/Terms";
 function App() {
   return (
     <>
+      {/* <div className="scroll-watcher"></div> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/logo 2.svg";
 import { Link, NavLink } from "react-router-dom";
 import facebook from "../../assets/svg/facebook.svg";
 import bijli from "../../assets/svg/bijli.svg";
 import instagram from "../../assets/svg/instagram.svg";
 import twitter from "../../assets/svg/twitter.svg";
+import { MobileNav } from "./MobileNav";
+
+import { RiMenuFoldFill } from "react-icons/ri";
 
 const SocialIcons = [facebook, bijli, instagram, twitter];
 
@@ -32,6 +35,7 @@ const Nav_Links = [
 ];
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <header className="py-5">
       <div className="flex justify-between items-center max-width border-b border-b-gray-700">
@@ -83,7 +87,16 @@ const Navbar = () => {
             );
           })}
         </div>
+        <div
+          className="lg:hidden flex"
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <RiMenuFoldFill className="text-[2.5rem]" />
+        </div>
       </div>
+      <MobileNav open={open} setOpen={setOpen} />
     </header>
   );
 };

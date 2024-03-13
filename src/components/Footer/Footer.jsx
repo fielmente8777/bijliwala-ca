@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col  w-[30%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col pt-1.5 text-base leading-6 text-opacity-60 max-md:mt-10">
-                <div className="text-[24px] font-[700] leading-[28px] max-md:mr-0.5">
+                <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px] max-md:mr-0.5">
                   <h3>Contact</h3>
                 </div>
                 <div className="flex gap-3 mt-5 leading-6 max-md:mr-1.5">
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col w-[12%] ml-5 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col py-0.5 text-base leading-6 whitespace-nowrap max-md:mt-10">
-                <div className="text-[24px] font-[700] leading-[28px]">
+                <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px]">
                   <h3>Navigation</h3>
                 </div>
                 <Link className="mt-4 text-[1.5rem]">
@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col w-[40%] justify-start max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow max-md:mt-10">
-                <div className="text-[24px] font-[700] leading-[28px]">
+                <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px]">
                   <h3>Subscribe to our Newsletter</h3>
                 </div>
                 <div className="flex gap-5 justify-between pl-3 mt-4 text-base leading-6 text-justify border border-solid border-stone-700 text-neutral-400 max-md:pl-5">
@@ -108,7 +108,7 @@ const Footer = () => {
                     className="shrink-0 w-12 aspect-[1.04]"
                   />
                 </div>
-                <div className="mt-8 text-[24px] font-[700] leading-[28px] max-md:mr-0">
+                <div className="mt-8 md:text-[24px] text-[1.8rem] font-[700] leading-[28px] max-md:mr-0">
                   <h3>Follow US</h3>
                 </div>
                 <div className="flex gap-2 pr-20 mt-5 text-xs leading-3 text-center text-white uppercase whitespace-nowrap max-md:pr-5">
@@ -175,24 +175,24 @@ const Footer = () => {
         </div>
 
         <div className="mt-10" />
-        <div className="flex gap-5 justify-between mt-10 text-xs leading-5 max-md:flex-wrap max-md:mt-10   max-md:mr-2.5 max-md:max-w-full">
+        <div className="flex gap-5 justify-between mt-10 text-xs leading-5 max-md:flex-wrap max-md:mt-10  max-md:mr-2.5 max-md:max-w-full ">
           <div className="flex gap-2">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1d39c014e943070322622bcd86f28622feddbd44fe8f90d727c57aedd727d36?"
               className="shrink-0 my-auto w-3 aspect-square"
             />
-            <div className="flex-auto text-[1.5rem]">
+            <div className="flex-auto md:text-[1.5rem] text-[1.3rem]">
               <p>
                 Design & Developed by{" "}
                 <Link to="https://eazotel.com/">Eazotel</Link>
               </p>
             </div>
-            <div className="text-[1.5rem]">
+            <div className="md:text-[1.5rem] text-[1.3rem]">
               <p>All Rights Reserved</p>
             </div>
           </div>
-          <div className="flex gap-5 justify-betwee">
+          <div className="flex gap-5 justify-between">
             <div>
               <Link to="/Privacy" className="text-[1.5rem]">
                 Privacy Policy

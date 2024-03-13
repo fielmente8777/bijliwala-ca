@@ -135,7 +135,7 @@ const About = () => {
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
         />
-        <div className="md:mt-20 mt-10 md:px-0 px-4">
+        <div className="max-width md:!mt-20 !mt-10">
           <Testimonal />
         </div>
       </section>

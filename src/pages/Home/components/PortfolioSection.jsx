@@ -23,9 +23,14 @@ const Portfolio = [
     Image: Portfolio2,
   },
   {
-    Heading1: "CLUB",
-    Heading2: "Club Kolkata",
+    Heading1: "RESTAURANT",
+    Heading2: "Karahi Point",
     Image: Portfolio3,
+  },
+  {
+    Heading1: "RETAIL OUTLET",
+    Heading2: "Indian Frootland",
+    Image: Portfolio1,
   },
   {
     Heading1: "CLUB",
@@ -33,8 +38,8 @@ const Portfolio = [
     Image: Portfolio2,
   },
   {
-    Heading1: "CLUB",
-    Heading2: "Club Kolkata",
+    Heading1: "RESTAURANT",
+    Heading2: "Karahi Point",
     Image: Portfolio3,
   },
 ];
