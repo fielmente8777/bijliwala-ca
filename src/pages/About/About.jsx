@@ -135,7 +135,7 @@ const About = () => {
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
         />
-        <div className="max-width md:!mt-20 !mt-10">
+        <div className=" md:!mt-20 !mt-10">
           <Testimonal />
         </div>
       </section>
@@ -143,8 +143,8 @@ const About = () => {
       {/* Brands Section***** */}
       <section className="layout-section">
         <SectionHeading
-          Heading1={"OUR SUCCESSFUL COLLABORATIONS"}
-          Heading2={"Partners who trust us "}
+          Heading1={"TRUSTED PARTNERS"}
+          Heading2={"Collaborations for Shared Success"}
         />
         <div className="md:mt-20 mt-10">
           <BrandSection />

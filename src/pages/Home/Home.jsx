@@ -50,7 +50,7 @@ const Home = () => {
             <div className="lg:w-[80%] w-[100%] flex flex-col gap-3">
               <h2 className="heading-h2">WE ARE</h2>
               <h3 className="heading-h3 leading-[4rem] font-bold">
-                Building dream projects in a{" "}
+                A Team of Hardworking Professionals
                 <span className="text-[#8e7861]">budget.</span>
               </h3>
               <p className="para">
@@ -97,7 +97,7 @@ const Home = () => {
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
         />
-        <div className="max-width md:!mt-20 !mt-10">
+        <div className="md:!mt-20 !mt-10">
           <Testimonal />
         </div>
       </section>

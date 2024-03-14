@@ -15,7 +15,7 @@ export const HomeBanner = () => {
   return (
     <>
       <div className="max-width lg:flex justify-end relative pb-10">
-        <div className="max-w-[1030px] mt-8">
+        <div className="max-w-[1030px]">
           <Swiper
             loop={true}
             slidesPerView={1}

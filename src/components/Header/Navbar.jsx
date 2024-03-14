@@ -24,10 +24,10 @@ const Nav_Links = [
     linkName: "Work",
     src: "/Work",
   },
-  {
-    linkName: "Blog",
-    src: "/Blogs",
-  },
+  // {
+  //   linkName: "Blog",
+  //   src: "/Blogs",
+  // },
   {
     linkName: "Contact",
     src: "/Contact",
@@ -38,7 +38,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <header className="py-5">
-      <div className="flex justify-between items-center max-width border-b border-b-gray-700">
+      <div className="flex justify-between items-center max-width ">
         <div className="flex gap-5 text-sm font-medium tracking-wide leading-6 max-md:flex-wrap max-md:max-w-full">
           <img
             loading="lazy"
@@ -58,7 +58,7 @@ const Navbar = () => {
                       index != Nav_Links.length - 1
                         ? "2px solid #473C30"
                         : "0px solid #473C30",
-                    paddingRight: "1.2rem",
+                    paddingRight: "3rem",
                   }}
                 >
                   {Links.linkName}

@@ -40,7 +40,7 @@ const Testimonal = () => {
         {new Array(5).fill("").map(() => {
           return (
             <SwiperSlide>
-              <div className="bg-[#1B1B1B] px-6 py-4">
+              <div className="bg-[#1B1B1B] px-6 py-10">
                 <div>
                   <div className="flex justify-center">
                     <ReactStars

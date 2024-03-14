@@ -55,7 +55,7 @@ export const Contact = () => {
 
             {/* form section**** */}
             <div className="lg:w-[35%] md:w-[50%]">
-              <form className="border border-[#8E7861] p-8">
+              <form className="border border-[#8E7861] p-12">
                 <h2 className="heading-h2 !text-white !capitalize ">
                   Get in <span className="text-[#8E7861]">Touch</span>
                 </h2>
@@ -105,7 +105,7 @@ export const Contact = () => {
                         />
                       </div>
                     </div>
-                    <div className="bg-[#1B1B1B] py-6 px-3">
+                    {/* <div className="bg-[#1B1B1B] py-6 px-3">
                       <div className="flex gap-4 items-center">
                         <div>
                           <FaLocationDot className="text-[1.6rem] text-[#8E7861]" />
@@ -117,7 +117,7 @@ export const Contact = () => {
                           placeholder="Address*"
                         />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Message**** */}
@@ -130,7 +130,7 @@ export const Contact = () => {
                         <textarea
                           type="text"
                           required
-                          rows={4}
+                          rows={8}
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                           placeholder="Message*"
                         />
@@ -152,13 +152,13 @@ export const Contact = () => {
       <section className="layout-section">
         <div className="max-width">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9581118058!2d76.76289349687472!3d28.644285696143115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1710156128727!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191307.21536761077!2d-79.74097138364637!3d43.84187455426463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b233b75b02939%3A0x4b34e9570f59b0a!2s219%20Gardenbrooke%20Trail%2C%20Brampton%2C%20ON%20L6P%203C9%2C%20Canada!5e0!3m2!1sen!2sin!4v1710394380717!5m2!1sen!2sin"
             width="100%"
             height="450"
-            allowFullScreen
+            allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
       </section>
     </div>

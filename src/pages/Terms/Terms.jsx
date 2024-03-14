@@ -49,7 +49,8 @@ const Terms = () => {
                         index == TermsArr.length - 1
                           ? "4px solid #A52323"
                           : "0",
-                      paddingLeft: TermsArr.length - 1 == index ? "2rem" : "0",
+                      paddingLeft:
+                        TermsArr.length - 1 == index ? "0.6rem" : "0",
                     }}
                   >
                     {Details.Heading}
