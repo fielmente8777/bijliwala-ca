@@ -2,7 +2,7 @@ import React from "react";
 
 export const Card1 = ({ Details, Position }) => {
   return (
-    <div className="border border-[#473C30]  flex items-center px-8 md:py-16 py-8">
+    <div className="border border-[#473C30] flex items-center px-8 md:py-16 py-8 min-h-[320px]">
       <div
         className={`flex flex-col gap-5 ${
           Position ? "items-center" : "items-start"

@@ -47,15 +47,17 @@ export const HomeBanner = () => {
           </Swiper>
         </div>
 
-        <div className="absolute top-32 left-0 w-[315px] h-[458px] bg-[#1B1B1B] p-2 z-[10] lg:block hidden">
-          <div className="border border-[#62513e] h-full flex justify-center items-center">
-            <div className="w-[271px] flex flex-col gap-4">
-              <h2 className="text-[1.5rem] font-medium">WE ARE</h2>
-              <h2 className="text-[3.2rem] leading-[4rem] font-bold">
+        <div className="lg:absolute top-32 left-0 lg:w-[315px] w-[90%] mx-auto lg:h-[458px]  bg-[#1B1B1B] p-2 z-[100]">
+          <div className="border border-[#62513e] h-full flex lg:justify-center items-center py-8">
+            <div className="lg:w-[271px] flex flex-col gap-4 lg:px-0 px-8">
+              <h2 className="md:text-[1.5rem] text-[1.3rem] font-medium">
+                WE ARE
+              </h2>
+              <h2 className="md:text-[3.2rem] text-[2.4rem] md:leading-[4rem] leading-[3rem] font-bold">
                 Building dream projects in a{" "}
                 <span className="text-[#8e7861]">budget.</span>
               </h2>
-              <p className="text-[1.5rem] font-normal leading-[2.4rem]">
+              <p className="text-[1.5rem] font-normal leading-[2.4rem] text-justify">
                 As a trusted leader in renovations and electrical solutions, we
                 bring your interior dreams to life. From restaurant upgrades to
                 cafe transformations, we're your partners in crafting spaces

@@ -7,14 +7,10 @@ const Footer = () => {
     <footer className="bg-[#1B1B1B] layout-section !pb-5">
       <div className="max-width">
         <div className="max-md:mr-2.5 max-md:max-w-full">
-          <div className="flex gap-20 max-md:flex-col max-md:gap-0 ">
-            <div className="flex flex-col w-[18%]  items-center  max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col text-base leading-6 max-md:mt-10 ">
-                <img
-                  loading="lazy"
-                  src={Logo}
-                  className="self-center aspect-[1.33] w-[190px]"
-                />
+          <div className="flex gap-20 max-lg:flex-col max-md:gap-0 ">
+            <div className="flex flex-col w-[18%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col w-[160px]">
+                <img loading="lazy" src={Logo} className="w-full h-full" />
                 <div className="mt-4">
                   <p className="text-[1.5rem]">
                     Lorem Ipsum is simply dummy text.
@@ -188,32 +184,35 @@ const Footer = () => {
         </div>
 
         <div className="mt-16" />
-        <div className="flex gap-5 justify-between mt-10 text-xs leading-5 max-md:flex-wrap max-md:mt-10  max-md:mr-2.5 max-md:max-w-full ">
-          <div className="flex gap-2">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1d39c014e943070322622bcd86f28622feddbd44fe8f90d727c57aedd727d36?"
-              className="shrink-0 my-auto w-3 aspect-square"
-            />
-            <div className="flex-auto md:text-[1.5rem] text-[1.3rem]">
-              <p>
-                Design & Developed by{" "}
-                <Link to="https://eazotel.com/" target="_blank">
-                  Eazotel
-                </Link>
-              </p>
+        <div className="flex lg:flex-row flex-col gap-4 justify-between">
+          <div className="flex gap-4 justify-between items-center">
+            <div className="flex gap-2 items-center">
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1d39c014e943070322622bcd86f28622feddbd44fe8f90d727c57aedd727d36?"
+                className="shrink-0 my-auto w-3 aspect-square"
+              />
+              <div className="flex md:text-[1.5rem] text-[1.3rem]">
+                <p>
+                  Design & Developed by{" "}
+                  <Link to="https://eazotel.com/" target="_blank">
+                    Eazotel
+                  </Link>
+                </p>
+              </div>
             </div>
             <div className="md:text-[1.5rem] text-[1.3rem]">
               <p>All Rights Reserved</p>
             </div>
           </div>
-          <div className="flex gap-5 justify-between">
+
+          <div className="flex justify-center items-center gap-6">
             <div>
               <Link to="/Privacy" className="text-[1.5rem]">
                 Privacy Policy
               </Link>
             </div>
-            <div className="flex-auto">
+            <div className="">
               <Link to="Terms" className="text-[1.5rem]">
                 Terms & Conditions
               </Link>

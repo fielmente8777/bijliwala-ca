@@ -10,12 +10,14 @@ const HeroSection = ({ Details }) => {
         </div>
         <div className="lg:w-[30%] w-[100%]">
           <div className="flex flex-col gap-5">
-            <h2 className="heading-h2">{Details.Heading1}</h2>
+            <div>
+              <h2 className="heading-h2">{Details.Heading1}</h2>
 
-            <h3 className="heading-h3">
-              {Details.Heading2}
-              <span className="text-[#8e7861]"></span>
-            </h3>
+              <h3 className="heading-h3">
+                {Details.Heading2}
+                <span className="text-[#8e7861]"></span>
+              </h3>
+            </div>
 
             <p className="para">{Details.Para}</p>
 
@@ -27,6 +29,7 @@ const HeroSection = ({ Details }) => {
           </div>
 
           <hr className="mt-8" />
+
           {Details.Icon && (
             <div className="flex gap-5 items-center mt-8 w-[262px]">
               {Details.Icon && (

@@ -34,7 +34,7 @@ const ContactSection = () => {
 
         {/* form section**** */}
         <div className="lg:w-[60%]">
-          <form className="border border-[#8E7861] p-8">
+          <form className="border border-[#473C30] p-8">
             <h2 className="heading-h2 !text-white ">Lorem Ipsum</h2>
             <div className="mt-5 flex flex-col gap-5">
               {/* Name And Phone*** */}
@@ -116,7 +116,7 @@ const ContactSection = () => {
               </div>
             </div>
             <div className="mt-6">
-              <button className="common-btn flex items-center gap-5">
+              <button className="common-btn flex items-center gap-5 md:w-auto w-full">
                 GET AN ONSITE INSPECTION <MdArrowRightAlt size={25} />
               </button>
             </div>

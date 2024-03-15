@@ -8,6 +8,7 @@ import twitter from "../../assets/svg/twitter.svg";
 import { MobileNav } from "./MobileNav";
 
 import { RiMenuFoldFill } from "react-icons/ri";
+import PhoneIcon from "../../assets/svg/phone.svg";
 
 const SocialIcons = [facebook, bijli, instagram, twitter];
 
@@ -39,6 +40,14 @@ const Navbar = () => {
   return (
     <header className="py-5">
       <div className="flex justify-between items-center max-width ">
+        <div
+          className="lg:hidden flex"
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <RiMenuFoldFill className="text-[2.5rem]" />
+        </div>
         <div className="flex gap-5 text-sm font-medium tracking-wide leading-6 max-md:flex-wrap max-md:max-w-full">
           <img
             loading="lazy"
@@ -72,7 +81,7 @@ const Navbar = () => {
           <Link to="/Blogs">BLOG</Link>
           <Link to="/Contact">CONTACT</Link> */}
         </ul>
-        <div className="flex gap-2 px-5 my-auto text-xs leading-3 uppercase">
+        <div className="hidden lg:flex gap-2 px-5 my-auto text-xs leading-3 uppercase">
           {SocialIcons.map((Icons) => {
             return (
               <Link className="w-[40px] h-[40px] border border-gray-700 rounded-full flex justify-center  items-center hover:bg-[#8E7861]">
@@ -87,14 +96,9 @@ const Navbar = () => {
             );
           })}
         </div>
-        <div
-          className="lg:hidden flex"
-          onClick={() => {
-            setOpen(!open);
-          }}
-        >
-          <RiMenuFoldFill className="text-[2.5rem]" />
-        </div>
+        <Link className="lg:hidden">
+          <img src={PhoneIcon} alt="phone-icon svg" className="w-full h-full" />
+        </Link>
       </div>
       <MobileNav open={open} setOpen={setOpen} />
     </header>

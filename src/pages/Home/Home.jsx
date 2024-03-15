@@ -46,7 +46,7 @@ const Home = () => {
       {/* Dream Projcet *** */}
       <section className="layout-section">
         <div className="max-width">
-          <div className="flex lg:flex-row flex-col gap-8 justify-between items-center">
+          <div className="flex lg:flex-row flex-col gap-8 justify-between lg:items-center">
             <div className="lg:w-[80%] w-[100%] flex flex-col gap-3">
               <h2 className="heading-h2">WE ARE</h2>
               <h3 className="heading-h3 leading-[4rem] font-bold">
@@ -61,7 +61,7 @@ const Home = () => {
                 Accident Assurance—where safety and style collide.
               </p>
             </div>
-            <div className="lg:w-[20%] flex justify-end">
+            <div className="lg:w-[20%] flex lg:justify-end">
               <button className="common-btn flex items-center gap-5">
                 Contact us <MdArrowRightAlt size={25} />
               </button>
@@ -97,26 +97,9 @@ const Home = () => {
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
         />
-        <div className="md:!mt-20 !mt-10">
+        <div className="md:!mt-20 !mt-10 lg:px-0 px-4">
           <Testimonal />
         </div>
-      </section>
-
-      <section>
-        <div className="max-width">
-          {/* <iframe
-            src="https://widgets.sociablekit.com/instagram-feed/iframe/25379950"
-            frameborder="0"
-            width="100%"
-            height="650px"
-          /> */}
-        </div>
-        {/* <div class="sk-instagram-feed" data-embed-id="25379950"></div>
-        <script
-          src="https://widgets.sociablekit.com/instagram-feed/widget.js"
-          async
-          defer
-        ></script> */}
       </section>
 
       {/* Brands Section***** */}

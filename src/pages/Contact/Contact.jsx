@@ -25,7 +25,7 @@ export const Contact = () => {
             <div className="lg:w-[65%] md:w-[50%]">
               <div>
                 <h2 className="heading-h3">Starting a New Project?</h2>
-                <div className="flex flex-col gap-4 mt-10">
+                <div className="flex flex-col gap-4 md:mt-10 mt-4">
                   <p className="para">
                     Come by our place at Bijliwala Contractors Canada! We're
                     here to help turn your ideas into reality. Visit us at our

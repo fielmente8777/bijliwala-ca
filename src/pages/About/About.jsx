@@ -19,6 +19,12 @@ import Img2 from "../../assets/Images/Teamimg2.png";
 import Img3 from "../../assets/Images/Teamimg3.png";
 import Img4 from "../../assets/Images/Teamimg4.png";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import arrowLeft from "../../assets/svg/arrowleft.svg";
+import arrowRight from "../../assets/svg/arrowright.svg";
+
 import { MdArrowRightAlt } from "react-icons/md";
 
 const Details = [
@@ -96,11 +102,71 @@ const About = () => {
       {/* Services Section******* */}
       <section className="layout-section">
         <div className="max-width">
-          <h2 className="heading-h2">OUR SERVICES</h2>
-          <h3 className="heading-h3">
+          <h2 className="heading-h2 md:text-start text-center">OUR SERVICES</h2>
+          <h3 className="heading-h3 md:text-start text-center">
             Winning <span className="text-[#8E7861]">Strategy</span>
           </h3>
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 md:mt-20 mt-10">
+          {/* slider for mobile****** */}
+          <div className="md:hidden md:mt-20 mt-10">
+            <Swiper
+              loop={true}
+              autoplay={{
+                delay: 4000,
+              }}
+              pagination={{
+                el: "#bullets-Services",
+              }}
+              navigation={{
+                prevEl: ".prev-btn",
+                nextEl: ".next-btn",
+              }}
+              modules={[Pagination, Autoplay, Navigation]}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }}
+            >
+              {Details.map((details) => {
+                return (
+                  <SwiperSlide>
+                    <Card1 Details={details} Position="Center" />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+
+            {/* swiper button and pagination customization***** */}
+            <div className="md:mt-16 mt-5 flex items-center gap-5 justify-center">
+              {/* left arrow*** */}
+              <div className="md:w-[35px] w-[22px] cursor-pointer prev-btn">
+                <img
+                  src={arrowLeft}
+                  alt="arrow-left-vecotr"
+                  className="w-full h-full"
+                />
+              </div>
+              {/* indicators***** */}
+              <span id="bullets-Services"></span>
+
+              {/* right arrows***** */}
+              <div className="md:w-[35px] w-[22px] cursor-pointer next-btn">
+                <img
+                  src={arrowRight}
+                  alt="arrow-right-vecotr"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* grid view for desktop**** */}
+          <div className="md:grid lg:grid-cols-4 md:grid-cols-3 hidden gap-5 md:mt-20 mt-10">
             {Details.map((details) => {
               return <Card1 Details={details} Position="Center" />;
             })}
@@ -111,8 +177,8 @@ const About = () => {
       {/* Team Section******* */}
       <section className="layout-section">
         <div className="max-width">
-          <h2 className="heading-h2">OUR TEAM</h2>
-          <h3 className="heading-h3">
+          <h2 className="heading-h2 md:text-start text-center">OUR TEAM</h2>
+          <h3 className="heading-h3 md:text-start text-center">
             Meet the <span className="text-[#8E7861]">Experts</span>
           </h3>
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 md:mt-20 mt-10">
@@ -135,7 +201,7 @@ const About = () => {
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
         />
-        <div className=" md:!mt-20 !mt-10">
+        <div className=" md:!mt-20 !mt-10 lg:px-0 px-4">
           <Testimonal />
         </div>
       </section>
