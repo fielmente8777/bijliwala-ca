@@ -81,7 +81,7 @@ const Home = () => {
           Heading1={" OUR WORK"}
           Heading2={"Creative Portfolio Designs"}
         />
-        <div className="mt-20">
+        <div className="mt-20 md:px-0 px-4">
           <PortfolioSection />
         </div>
       </section>
