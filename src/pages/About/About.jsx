@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AboutImg from "../../assets/Images/ContactImage.png";
 import Banner from "../../components/PageBanner/Banner";
 import HeroSection from "../../components/HeroSections/HeroSection";
@@ -26,6 +26,7 @@ import arrowLeft from "../../assets/svg/arrowleft.svg";
 import arrowRight from "../../assets/svg/arrowright.svg";
 
 import { MdArrowRightAlt } from "react-icons/md";
+import useScrollTop from "../../components/useTopScroll";
 
 const Details = [
   {
@@ -74,6 +75,7 @@ const Details2 = [
 ];
 
 const About = () => {
+  useScrollTop();
   return (
     <>
       {/* Banner Section****** */}
@@ -88,13 +90,15 @@ const About = () => {
         <HeroSection
           Details={{
             Heading1: "TURNING SPACES FOR BETTER LIVING",
-            Heading2:
-              "Experience the Art of Exellent Transformation in Renovation.",
+            Heading2: "Experience the Art of Exellent Transformation in",
+            Span: " Renovation.",
             Para: "Welcome to a world where innovation meets your goals, where we transform your dreams into remarkable, market-ready spaces. Bijliwala Contractors Canada is a company that began its journey in 2000 with a simple vision-to transform ordinary spaces into extra ordinary living. From cafe transformations to restaurant upgrades, our impact is felt all over.",
-            Para2: "Start your transformation today.",
             // Icon: HeroIcon,
             Image: HeroImage,
-            Button: "contact us",
+            Button: {
+              Name: "contact us",
+              Src: "/Contact",
+            },
           }}
         />
       </section>
@@ -196,7 +200,7 @@ const About = () => {
       </section>
 
       {/* Testimonal Section******* */}
-      <section className="layout-section">
+      {/* <section className="layout-section">
         <SectionHeading
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
@@ -204,10 +208,10 @@ const About = () => {
         <div className=" md:!mt-20 !mt-10 lg:px-0 px-4">
           <Testimonal />
         </div>
-      </section>
+      </section> */}
 
       {/* Brands Section***** */}
-      <section className="layout-section">
+      {/* <section className="layout-section">
         <SectionHeading
           Heading1={"TRUSTED PARTNERS"}
           Heading2={"Collaborations for Shared Success"}
@@ -215,7 +219,7 @@ const About = () => {
         <div className="md:mt-20 mt-10">
           <BrandSection />
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

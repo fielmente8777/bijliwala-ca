@@ -1,14 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import Banner from "../../components/PageBanner/Banner";
 import ContactImg from "../../assets/Images/ContactImage.png";
+import axios from "axios";
 
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { IoMailOpen } from "react-icons/io5";
 import { FaLocationDot, FaMessage, aMessage } from "react-icons/fa6";
 
 import { MdArrowRightAlt } from "react-icons/md";
+import useScrollTop from "../../components/useTopScroll";
 
 export const Contact = () => {
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userMessage, setUserMessage] = useState("");
+  const [userPhone, setUserPhone] = useState("");
+  const [formRes, setFormRes] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormRes(true);
+    try {
+      const { data } = await axios.post(
+        `https://eazotel.eazotel.com/api/dashboard/editcontact`,
+        {
+          Domain: "bijliwala", // Replace with your actual domain value
+          email: userEmail,
+          Name: userName,
+          Contact: userPhone,
+          // Subject: userMessage,
+          Description: userMessage,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (data.Status) {
+        setFormRes(true);
+        setUserName("");
+        setUserEmail("");
+        setUserMessage("");
+        setUserPhone("");
+        setFormRes(false);
+        alert("message sended");
+      } else {
+        setFormRes(false);
+        alert("somethin wrong!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useScrollTop();
   return (
     <div>
       <Banner
@@ -24,7 +70,10 @@ export const Contact = () => {
             {/* detials section**** */}
             <div className="lg:w-[65%] md:w-[50%]">
               <div>
-                <h2 className="heading-h3">Starting a New Project?</h2>
+                <h2 className="heading-h3">
+                  Starting a New{" "}
+                  <span className="text-[#8e7861]">Project?</span>
+                </h2>
                 <div className="flex flex-col gap-4 md:mt-10 mt-4">
                   <p className="para">
                     Come by our place at Bijliwala Contractors Canada! We're
@@ -35,18 +84,20 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="mt-20">
-                <h2 className="heading-h3">Contact us</h2>
+                <h2 className="heading-h3 capitalize">
+                  Contact <span className="text-[#8e7861]">us</span>
+                </h2>
                 <div className="flex flex-col gap-5 mt-10">
                   <div className="flex items-center gap-4">
-                    <FaLocationDot className="text-[2rem]" />
+                    <FaLocationDot className="text-[2rem] text-[#8e7861]" />
                     <p className="para">778 NE 84th Canada</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <FaPhoneAlt className="text-[2rem]" />
+                    <FaPhoneAlt className="text-[2rem] text-[#8e7861]" />
                     <p className="para">416-407-7755</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <IoMailOpen className="text-[2rem]" />
+                    <IoMailOpen className="text-[2rem] text-[#8e7861]" />
                     <p className="para">Lagancontractor</p>
                   </div>
                 </div>
@@ -55,7 +106,10 @@ export const Contact = () => {
 
             {/* form section**** */}
             <div className="lg:w-[35%] md:w-[50%]">
-              <form className="border border-[#8E7861] p-12">
+              <form
+                onSubmit={handleSubmit}
+                className="border border-[#8E7861] p-12"
+              >
                 <h2 className="heading-h2 !text-white !capitalize ">
                   Get in <span className="text-[#8E7861]">Touch</span>
                 </h2>
@@ -72,6 +126,10 @@ export const Contact = () => {
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                           placeholder="Your Name*"
+                          value={userName}
+                          onChange={(e) => {
+                            setUserName(e.target.value);
+                          }}
                         />
                       </div>
                     </div>
@@ -85,6 +143,10 @@ export const Contact = () => {
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                           placeholder="Your Phone Number*"
+                          value={userPhone}
+                          onChange={(e) => {
+                            setUserPhone(e.target.value);
+                          }}
                         />
                       </div>
                     </div>
@@ -102,6 +164,10 @@ export const Contact = () => {
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                           placeholder="Your Email*"
+                          value={userEmail}
+                          onChange={(e) => {
+                            setUserEmail(e.target.value);
+                          }}
                         />
                       </div>
                     </div>
@@ -133,15 +199,25 @@ export const Contact = () => {
                           rows={8}
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                           placeholder="Message*"
+                          value={userMessage}
+                          onChange={(e) => {
+                            setUserMessage(e.target.value);
+                          }}
                         />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="mt-6">
-                  <button className="common-btn flex items-center gap-3">
-                    SUBMIT <MdArrowRightAlt size={25} />
-                  </button>
+                  {formRes ? (
+                    <button className="common-btn flex items-center gap-3">
+                      Loading..... <MdArrowRightAlt size={25} />
+                    </button>
+                  ) : (
+                    <button className="common-btn flex items-center gap-3">
+                      SUBMIT <MdArrowRightAlt size={25} />
+                    </button>
+                  )}
                 </div>
               </form>
             </div>

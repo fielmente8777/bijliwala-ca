@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HomeBanner } from "./components/HomeBanner";
 import HeroSection from "../../components/HeroSections/HeroSection";
 
@@ -14,8 +14,12 @@ import HeroImage from "../../assets/Images/HeroImage.png";
 import HeroIcon from "../../assets/messure.svg";
 
 import { MdArrowRightAlt } from "react-icons/md";
+import { Link } from "react-router-dom";
+
+import useScrollTop from "../../components/useTopScroll";
 
 const Home = () => {
+  useScrollTop();
   return (
     <main>
       {/* Home Banner**** */}
@@ -28,12 +32,16 @@ const Home = () => {
         <HeroSection
           Details={{
             Heading1: "ABOUT US",
-            Heading2: "Complete Design, Build and Turnkey Projects.",
+            Heading2: "Complete Design, Build and Turnkey ",
+            Span: "Projects.",
             Heading3: "20+ Years of Renovating Experience",
             Para: "Welcome to a world of innovative design, safety, and client-centric excellence. Bijliwala Contractors Canada is a company that began its journey in 2000 with a simple vision-to transform ordinary spaces into extra ordinary living. From cafe transformations to restaurant upgrades, our impact is felt all over.",
             Icon: HeroIcon,
             Image: HeroImage,
-            Button: "KNOW MORE",
+            Button: {
+              Name: "KNOW MORE",
+              Src: "/About",
+            },
           }}
         />
       </section>
@@ -50,8 +58,8 @@ const Home = () => {
             <div className="lg:w-[80%] w-[100%] flex flex-col gap-3">
               <h2 className="heading-h2">WE ARE</h2>
               <h3 className="heading-h3 leading-[4rem] font-bold">
-                A Team of Hardworking Professionals
-                <span className="text-[#8e7861]">budget.</span>
+                Your Premier Partner for Restaurant Turnkey Projects in
+                <span className="text-[#8e7861]"> Mississauga</span>
               </h3>
               <p className="para">
                 We're not just certified; we're WHMIS Certified. Trust our Red
@@ -61,11 +69,14 @@ const Home = () => {
                 Accident Assurance—where safety and style collide.
               </p>
             </div>
-            <div className="lg:w-[20%] flex lg:justify-end">
-              <button className="common-btn flex items-center gap-5">
+            {/* <div className="lg:w-[20%] flex lg:justify-end">
+              <Link
+                to={"/Contact"}
+                className="common-btn flex items-center gap-5"
+              >
                 Contact us <MdArrowRightAlt size={25} />
-              </button>
-            </div>
+              </Link>
+            </div> */}
           </div>
         </div>
       </section>
@@ -79,9 +90,10 @@ const Home = () => {
       <section className="layout-section">
         <SectionHeading
           Heading1={" OUR WORK"}
-          Heading2={"Creative Portfolio Designs"}
+          Heading2={"Creative Portfolio "}
+          SPAN={"Designs"}
         />
-        <div className="mt-20 md:px-0 px-4">
+        <div className="max-w-[1600px] mx-auto mt-20 md:px-0 px-4">
           <PortfolioSection />
         </div>
       </section>
@@ -95,9 +107,10 @@ const Home = () => {
       <section className="layout-section">
         <SectionHeading
           Heading1={"TESTIMONIALS"}
-          Heading2={"Happy Client Experiences"}
+          Heading2={"Happy Client "}
+          SPAN={"Experiences"}
         />
-        <div className="md:!mt-20 !mt-10 lg:px-0 px-4">
+        <div className="max-w-[1600px] mx-auto md:!mt-20 !mt-10 lg:px-0 px-4">
           <Testimonal />
         </div>
       </section>
@@ -106,9 +119,10 @@ const Home = () => {
       <section className="layout-section">
         <SectionHeading
           Heading1={"OUR SUCCESSFUL COLLABORATIONS"}
-          Heading2={"Partners who trust us "}
+          Heading2={"Partners who"}
+          SPAN={"trust us"}
         />
-        <div className="md:mt-20 mt-10">
+        <div className="max-w-[1600px] mx-auto md:mt-20 mt-10">
           <BrandSection />
         </div>
       </section>

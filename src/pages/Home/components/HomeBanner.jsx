@@ -11,6 +11,8 @@ import arrowRight from "../../../assets/svg/arrowright.svg";
 
 import { MdArrowRightAlt } from "react-icons/md";
 
+import { Link } from "react-router-dom";
+
 export const HomeBanner = () => {
   return (
     <>
@@ -65,9 +67,12 @@ export const HomeBanner = () => {
               </p>
 
               <div>
-                <button className="common-btn flex gap-4 items-center">
+                <Link
+                  to={"/Contact"}
+                  className="common-btn w-fit flex gap-4 items-center"
+                >
                   Contact us <MdArrowRightAlt size={25} />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

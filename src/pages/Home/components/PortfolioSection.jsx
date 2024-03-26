@@ -10,6 +10,7 @@ import Portfolio2 from "../../../assets/Images/portfolio2.png";
 import Portfolio3 from "../../../assets/Images/portfolio3.png";
 
 import { MdArrowRightAlt } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Portfolio = [
   {
@@ -90,9 +91,12 @@ const PortfolioSection = () => {
                       {Portfolio.Heading2}
                     </h3>
                     <div className="flex justify-center mt-5">
-                      <button className="common-btn flex items-center gap-5">
+                      <Link
+                        to={"/Work"}
+                        className="common-btn flex items-center gap-5"
+                      >
                         View Details <MdArrowRightAlt size={25} />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

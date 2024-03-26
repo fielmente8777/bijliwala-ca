@@ -10,7 +10,12 @@ import { MobileNav } from "./MobileNav";
 import { RiMenuFoldFill } from "react-icons/ri";
 import PhoneIcon from "../../assets/svg/phone.svg";
 
-const SocialIcons = [facebook, bijli, instagram, twitter];
+const SocialIcons = [
+  {
+    Icon: instagram,
+    Src: "/",
+  },
+];
 
 const Nav_Links = [
   {
@@ -18,11 +23,11 @@ const Nav_Links = [
     src: "/",
   },
   {
-    linkName: "About",
+    linkName: "About Us",
     src: "/About",
   },
   {
-    linkName: "Work",
+    linkName: "Our Work",
     src: "/Work",
   },
   // {
@@ -30,8 +35,8 @@ const Nav_Links = [
   //   src: "/Blogs",
   // },
   {
-    linkName: "Contact",
-    src: "/Contact",
+    linkName: "Contact Us",
+    src: "/Contact ",
   },
 ];
 
@@ -48,13 +53,16 @@ const Navbar = () => {
         >
           <RiMenuFoldFill className="text-[2.5rem]" />
         </div>
-        <div className="flex gap-5 text-sm font-medium tracking-wide leading-6 max-md:flex-wrap max-md:max-w-full">
+        <Link
+          to="/"
+          className="flex gap-5 text-sm font-medium tracking-wide leading-6 max-md:flex-wrap max-md:max-w-full"
+        >
           <img
             loading="lazy"
             src={Logo}
             className="shrink-0 aspect-[1.33] w-[91px]"
           />
-        </div>
+        </Link>
         <ul className="hidden lg:flex gap-10">
           {Nav_Links.map((Links, index) => {
             return (
@@ -84,10 +92,13 @@ const Navbar = () => {
         <div className="hidden lg:flex gap-2 px-5 my-auto text-xs leading-3 uppercase">
           {SocialIcons.map((Icons) => {
             return (
-              <Link className="w-[40px] h-[40px] border border-gray-700 rounded-full flex justify-center  items-center hover:bg-[#8E7861]">
+              <Link
+                to={Icons.Src}
+                className="w-[40px] h-[40px] border border-gray-700 rounded-full flex justify-center  items-center hover:bg-[#8E7861]"
+              >
                 <div className="w-[12px]">
                   <img
-                    src={Icons}
+                    src={Icons.Icon}
                     alt={`${Icons}-vector`}
                     className="w-full h-full"
                   />

@@ -13,6 +13,8 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import arrowLeft from "../../assets/svg/arrowleft.svg";
 import arrowRight from "../../assets/svg/arrowright.svg";
+import { Link } from "react-router-dom";
+import useScrollTop from "../../components/useTopScroll";
 
 const Wroks = [
   {
@@ -48,6 +50,7 @@ const Wroks = [
 ];
 
 const OurWork = () => {
+  useScrollTop();
   return (
     <>
       <Banner
@@ -88,9 +91,12 @@ const OurWork = () => {
                     </div>
 
                     <div>
-                      <button className="common-btn flex items-center gap-3">
+                      <Link
+                        to={"/Contact"}
+                        className="common-btn w-fit flex items-center gap-3"
+                      >
                         contact us <MdArrowRightAlt size={25} />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

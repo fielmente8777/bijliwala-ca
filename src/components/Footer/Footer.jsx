@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../../assets/logo 2.svg";
 import { Link } from "react-router-dom";
+import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -11,11 +12,11 @@ const Footer = () => {
             <div className="flex flex-col w-[18%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col w-[160px]">
                 <img loading="lazy" src={Logo} className="w-full h-full" />
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <p className="text-[1.5rem]">
                     Lorem Ipsum is simply dummy text.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -76,12 +77,12 @@ const Footer = () => {
                   </Link>
                   <Link to="/About" className="mt-3 text-[1.5rem]  ">
                     <p className="hover:text-[#8E7861] transition-colors duration-300">
-                      About
+                      About Us
                     </p>
                   </Link>
                   <Link to="/Work" className="mt-3 text-[1.5rem] ">
                     <p className=" hover:text-[#8E7861] transition-colors duration-300">
-                      Work
+                      Our Work
                     </p>
                   </Link>
                   {/* <Link className="mt-3 text-[1.5rem] ">
@@ -91,7 +92,7 @@ const Footer = () => {
                   </Link> */}
                   <Link to="/Contact" className="mt-3 text-[1.5rem] ">
                     <p className=" hover:text-[#8E7861] transition-colors duration-300">
-                      Contact
+                      Contact Us
                     </p>
                   </Link>
                 </div>
@@ -121,7 +122,7 @@ const Footer = () => {
                   <h3>Follow US</h3>
                 </div>
                 <div className="flex gap-2 pr-20 mt-5 text-xs leading-3 text-center text-white uppercase whitespace-nowrap max-md:pr-5">
-                  <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10 hover:bg-[#8E7861] transition-colors duration-300">
+                  {/* <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10 hover:bg-[#8E7861] transition-colors duration-300">
                     <svg
                       width="12"
                       height="12"
@@ -134,8 +135,8 @@ const Footer = () => {
                         fill="white"
                       />
                     </svg>
-                  </div>
-                  <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
+                  </div> */}
+                  {/* <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
                     <svg
                       width="12"
                       height="12"
@@ -148,7 +149,7 @@ const Footer = () => {
                         fill="white"
                       />
                     </svg>
-                  </div>
+                  </div> */}
                   <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
                     <svg
                       width="12"
@@ -163,7 +164,7 @@ const Footer = () => {
                       />
                     </svg>
                   </div>
-                  <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
+                  {/* <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
                     <svg
                       width="12"
                       height="12"
@@ -176,7 +177,7 @@ const Footer = () => {
                         fill="white"
                       />
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -201,12 +202,12 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="md:text-[1.5rem] text-[1.3rem]">
+            {/* <div className="md:text-[1.5rem] text-[1.3rem]">
               <p>All Rights Reserved</p>
-            </div>
+            </div> */}
           </div>
 
-          <div className="flex justify-center items-center gap-6">
+          {/* <div className="flex justify-center items-center gap-6">
             <div>
               <Link to="/Privacy" className="text-[1.5rem]">
                 Privacy Policy
@@ -217,9 +218,27 @@ const Footer = () => {
                 Terms & Conditions
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
+
+      {/* Phone******** */}
+      <Link
+        to={`tel:${4164077755}`}
+        target="_blank"
+        className="whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+      >
+        <span className="sr-only">what's app</span> <FaPhone />
+      </Link>
+
+      {/* Whats app******** */}
+      <Link
+        to={`https://wa.me/${4164077755}`}
+        target="_blank"
+        className="whatsapp-button inline-block fixed bottom-[20px] right-[20px] w-[50px] h-[50px] bg-[#4DC251] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+      >
+        <span className="sr-only">what's app</span> <FaWhatsapp />
+      </Link>
     </footer>
   );
 };

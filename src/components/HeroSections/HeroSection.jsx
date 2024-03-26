@@ -1,5 +1,6 @@
 import React from "react";
 import { MdArrowRightAlt } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const HeroSection = ({ Details }) => {
   return (
@@ -15,7 +16,7 @@ const HeroSection = ({ Details }) => {
 
               <h3 className="heading-h3">
                 {Details.Heading2}
-                <span className="text-[#8e7861]"></span>
+                <span className="text-[#8e7861]">{Details.Span}</span>
               </h3>
             </div>
 
@@ -48,9 +49,12 @@ const HeroSection = ({ Details }) => {
           )}
 
           <div className="mt-8">
-            <button className="common-btn flex items-center gap-5">
-              {Details.Button} <MdArrowRightAlt size={25} />
-            </button>
+            <Link
+              to={Details.Button.Src}
+              className="common-btn w-fit flex items-center gap-5"
+            >
+              {Details.Button.Name} <MdArrowRightAlt size={25} />
+            </Link>
           </div>
         </div>
       </div>

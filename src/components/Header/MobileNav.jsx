@@ -7,20 +7,20 @@ const Nav_Links = [
     src: "/",
   },
   {
-    linkName: "About",
+    linkName: "About Us",
     src: "/About",
   },
   {
-    linkName: "Work",
+    linkName: "Our Work",
     src: "/Work",
   },
+  // {
+  //   linkName: "Blog",
+  //   src: "/Blogs",
+  // },
   {
-    linkName: "Blog",
-    src: "/Blogs",
-  },
-  {
-    linkName: "Contact",
-    src: "/Contact",
+    linkName: "Contact Us",
+    src: "/Contact ",
   },
 ];
 
