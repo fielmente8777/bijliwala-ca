@@ -233,7 +233,7 @@ const Footer = () => {
 
       {/* Whats app******** */}
       <Link
-        to={`https://wa.me/${4164077755}`}
+        to={`https://wa.me/${+14164077755}`}
         target="_blank"
         className="whatsapp-button inline-block fixed bottom-[20px] right-[20px] w-[50px] h-[50px] bg-[#4DC251] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
