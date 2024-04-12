@@ -20,13 +20,13 @@ const ContactSection = () => {
     setFormRes(true);
     try {
       const { data } = await axios.post(
-        `https://eazotel.eazotel.com/api/dashboard/editcontact`,
+        `https://nexon.eazotel.com/eazotel/addcontacts`,
         {
           Domain: "bijliwala", // Replace with your actual domain value
           email: userEmail,
           Name: userName,
           Contact: userPhone,
-          Subject: userAddress,
+          // Subject: userAddress,
           Description: userMessage,
         },
         {
@@ -150,7 +150,6 @@ const ContactSection = () => {
                     </div>
                     <input
                       type="text"
-                      required
                       className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
                       placeholder="Address*"
                       value={userAddress}

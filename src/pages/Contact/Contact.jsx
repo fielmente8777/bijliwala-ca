@@ -22,7 +22,7 @@ export const Contact = () => {
     setFormRes(true);
     try {
       const { data } = await axios.post(
-        `https://eazotel.eazotel.com/api/dashboard/editcontact`,
+        `https://nexon.eazotel.com/eazotel/addcontacts`,
         {
           Domain: "bijliwala", // Replace with your actual domain value
           email: userEmail,
