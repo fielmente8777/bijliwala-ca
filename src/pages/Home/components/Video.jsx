@@ -12,9 +12,13 @@ const VideoSection = () => {
         backgroundSize: "cover",
       }}
     >
-      <div>
+      <iframe
+        className="w-[1600px] max-md:w-full h-[100%]"
+        src="https://www.youtube.com/embed/QDPXrp9dCQI?loop=1&autoplay=1&mute=1&vq=hd1080"
+        frameborder="0" allowfullscreen></iframe>
+      {/* <div>
         <MdOutlinePlayCircleOutline className="text-[8rem] text-[#8E7861] cursor-pointer" />
-      </div>
+      </div> */}
     </div>
   );
 };

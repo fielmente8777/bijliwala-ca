@@ -228,7 +228,7 @@ const Footer = () => {
         target="_blank"
         className="max-md:hidden whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
-        <span className="sr-only">what's app</span> <FaPhone />
+        <span className="sr-only">what's app</span> <FaPhone className="transform rotate-[100deg]" />
       </Link >
 
       {/* Whats app******** */}
