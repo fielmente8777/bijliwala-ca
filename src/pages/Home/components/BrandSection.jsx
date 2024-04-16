@@ -10,10 +10,10 @@ const Brand = [Brand1, Brand2, Brand3, Brand4, Brand5, Brand6];
 
 const BrandSection = () => {
   return (
-    <div className="grid xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-5 px-4">
+    <div className="grid xl:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-5 px-4">
       {Brand.map((Image) => {
         return (
-          <div className="border border-[#473C30] flex items-center justify-center min-h-[230px]">
+          <div className="border border-[#473C30] flex items-center justify-center min-h-[150px] p-2">
             <div className="w-[156px]">
               <img src={Image} alt="" className="w-full h-auto" />
             </div>

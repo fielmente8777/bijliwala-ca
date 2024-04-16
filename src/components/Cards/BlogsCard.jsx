@@ -1,4 +1,5 @@
 import React from "react";
+import { MdArrowRightAlt } from "react-icons/md";
 
 const BlogsCard = () => {
   return (
@@ -19,7 +20,9 @@ const BlogsCard = () => {
           Malorum for use in a type....
         </p>
         <div>
-          <button className="common-btn">Read More</button>
+          <button className="common-btn flex items-center gap-3">
+            Read More <MdArrowRightAlt size={25} />
+          </button>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --primary-black: #070707;
   --primary-white: #fbfbfb;
@@ -7,6 +8,23 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --primary-black : #070707;
+  --primary-white : #fbfbfb;
+  --primary-gray: #473c30;
+  --secondary-white:#999999;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-size: 62.5%;
+   font-family: "Montserrat", sans-serif;
+  //  scroll-behavior: smooth;
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
 }
 
 body {
@@ -21,6 +39,32 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: rgb(0, 0, 0); 
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--primary-gray);
+
+  border-radius: 100dvb;
+}
+
+// .scroll-watcher{
+//     width: 0%;
+//     height: 2px;
+//     background-color: white;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 999;
+//     animation: scrollwatch 2s linear;
+//     animation-timeline: scroll();
+//     @keyframes scrollwatch {
+//         100%{
+//            width: 100%;
+//         }
+//     }
+// }
 
 .max-width {
   max-width: 1240px;
@@ -39,8 +83,14 @@ input::-webkit-inner-spin-button {
   }
 }
 
+<<<<<<< HEAD
 .pageBanner {
+=======
+.pageBanner{
+  max-width: 1600px;
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
   width: 100%;
+  margin: 0 auto;
   height: 600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -94,8 +144,8 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
 
   @media (width<768px) {
-    font-size: 2rem;
-    line-height: 3.4rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
 }
 
@@ -119,10 +169,18 @@ input::-webkit-inner-spin-button {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 500;
+<<<<<<< HEAD
 
+=======
+  border: 1.8px solid #8E7861; 
+  &:active{
+    scale: 0.9;
+  }
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
   @media (width<600px) {
     font-size: 1.3rem;
   }
+  
 }
 
 // Swiper bulltes customization*****

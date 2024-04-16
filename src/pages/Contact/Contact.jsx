@@ -1,12 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import Banner from "../../components/PageBanner/Banner";
 import ContactImg from "../../assets/Images/ContactImage.png";
+import axios from "axios";
 
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { IoMailOpen } from "react-icons/io5";
 import { FaLocationDot, FaMessage, aMessage } from "react-icons/fa6";
 
+import { MdArrowRightAlt } from "react-icons/md";
+import useScrollTop from "../../components/useTopScroll";
+
 export const Contact = () => {
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userMessage, setUserMessage] = useState("");
+  const [userPhone, setUserPhone] = useState("");
+  const [formRes, setFormRes] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setFormRes(true);
+    try {
+      const { data } = await axios.post(
+        `https://nexon.eazotel.com/eazotel/addcontacts`,
+        {
+          Domain: "bijliwala", // Replace with your actual domain value
+          email: userEmail,
+          Name: userName,
+          Contact: userPhone,
+          // Subject: userMessage,
+          Description: userMessage,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (data.Status) {
+        setFormRes(true);
+        setUserName("");
+        setUserEmail("");
+        setUserMessage("");
+        setUserPhone("");
+        setFormRes(false);
+        alert("message sended");
+      } else {
+        setFormRes(false);
+        alert("somethin wrong!");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useScrollTop();
   return (
     <div>
       <Banner
@@ -22,8 +70,11 @@ export const Contact = () => {
             {/* detials section**** */}
             <div className="lg:w-[60%] md:w-[50%]">
               <div>
-                <h2 className="heading-h3">Starting a New Project?</h2>
-                <div className="flex flex-col gap-4 mt-10">
+                <h2 className="heading-h3">
+                  Starting a New{" "}
+                  <span className="text-[#8e7861]">Project?</span>
+                </h2>
+                <div className="flex flex-col gap-4 md:mt-10 mt-4">
                   <p className="para">
                     Come by our place at Bijliwala Contractors Canada! We're
                     here to help turn your ideas into reality. Visit us at our
@@ -33,18 +84,20 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="mt-20">
-                <h2 className="heading-h3">Contact us</h2>
+                <h2 className="heading-h3 capitalize">
+                  Contact <span className="text-[#8e7861]">us</span>
+                </h2>
                 <div className="flex flex-col gap-5 mt-10">
                   <div className="flex items-center gap-4">
-                    <FaLocationDot className="text-[2rem]" />
+                    <FaLocationDot className="text-[2rem] text-[#8e7861]" />
                     <p className="para">778 NE 84th Canada</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <FaPhoneAlt className="text-[2rem]" />
+                    <FaPhoneAlt className="text-[2rem] text-[#8e7861]" />
                     <p className="para">416-407-7755</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <IoMailOpen className="text-[2rem]" />
+                    <IoMailOpen className="text-[2rem] text-[#8e7861]" />
                     <p className="para">Lagancontractor</p>
                   </div>
                 </div>
@@ -52,9 +105,20 @@ export const Contact = () => {
             </div>
 
             {/* form section**** */}
+<<<<<<< HEAD
             <div className="lg:w-[40%] md:w-[50%]">
               <form className="border border-[#8E7861] px-12 py-10 font-bold">
                 <h2 className="heading-h3 !text-white ">Get in <span className="text-[#8E7861] text">touch</span></h2>
+=======
+            <div className="lg:w-[35%] md:w-[50%]">
+              <form
+                onSubmit={handleSubmit}
+                className="border border-[#8E7861] p-12"
+              >
+                <h2 className="heading-h2 !text-white !capitalize ">
+                  Get in <span className="text-[#8E7861]">Touch</span>
+                </h2>
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                 <div className="mt-5 flex flex-col gap-5">
                   {/* Name And Phone*** */}
                   <div className="grid sm:grid-cols-1 gap-5 w-full">
@@ -67,7 +131,15 @@ export const Contact = () => {
                           type="text"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
+<<<<<<< HEAD
                           placeholder="Your Name"
+=======
+                          placeholder="Your Name*"
+                          value={userName}
+                          onChange={(e) => {
+                            setUserName(e.target.value);
+                          }}
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
@@ -80,7 +152,15 @@ export const Contact = () => {
                           type="number"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
+<<<<<<< HEAD
                           placeholder="Your Phone Number"
+=======
+                          placeholder="Your Phone Number*"
+                          value={userPhone}
+                          onChange={(e) => {
+                            setUserPhone(e.target.value);
+                          }}
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
@@ -97,11 +177,19 @@ export const Contact = () => {
                           type="email"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
+<<<<<<< HEAD
                           placeholder="Your Email"
+=======
+                          placeholder="Your Email*"
+                          value={userEmail}
+                          onChange={(e) => {
+                            setUserEmail(e.target.value);
+                          }}
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
-                    <div className="bg-[#1B1B1B] py-6 px-3">
+                    {/* <div className="bg-[#1B1B1B] py-6 px-3">
                       <div className="flex gap-4 items-center">
                         <div>
                           <FaLocationDot className="text-[1.6rem] text-[#8E7861]" />
@@ -113,7 +201,7 @@ export const Contact = () => {
                           placeholder="Address"
                         />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Message**** */}
@@ -126,18 +214,38 @@ export const Contact = () => {
                         <textarea
                           type="text"
                           required
-                          rows={4}
+                          rows={8}
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
+<<<<<<< HEAD
                           placeholder="Message"
+=======
+                          placeholder="Message*"
+                          value={userMessage}
+                          onChange={(e) => {
+                            setUserMessage(e.target.value);
+                          }}
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="mt-6">
+<<<<<<< HEAD
                   <button className="common-btn">
                     Submit
                   </button>
+=======
+                  {formRes ? (
+                    <button className="common-btn flex items-center gap-3">
+                      Loading..... <MdArrowRightAlt size={25} />
+                    </button>
+                  ) : (
+                    <button className="common-btn flex items-center gap-3">
+                      SUBMIT <MdArrowRightAlt size={25} />
+                    </button>
+                  )}
+>>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                 </div>
               </form>
             </div>
@@ -148,13 +256,13 @@ export const Contact = () => {
       <section className="layout-section">
         <div className="max-width">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9581118058!2d76.76289349687472!3d28.644285696143115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1710156128727!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191307.21536761077!2d-79.74097138364637!3d43.84187455426463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b233b75b02939%3A0x4b34e9570f59b0a!2s219%20Gardenbrooke%20Trail%2C%20Brampton%2C%20ON%20L6P%203C9%2C%20Canada!5e0!3m2!1sen!2sin!4v1710394380717!5m2!1sen!2sin"
             width="100%"
             height="450"
-            allowFullScreen
+            allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
       </section>
     </div>

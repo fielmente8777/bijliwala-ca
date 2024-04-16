@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AboutImg from "../../assets/Images/ContactImage.png";
 import Banner from "../../components/PageBanner/Banner";
 import HeroSection from "../../components/HeroSections/HeroSection";
@@ -18,6 +18,15 @@ import Img from "../../assets/Images/TeamImg1.png";
 import Img2 from "../../assets/Images/Teamimg2.png";
 import Img3 from "../../assets/Images/Teamimg3.png";
 import Img4 from "../../assets/Images/Teamimg4.png";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+import arrowLeft from "../../assets/svg/arrowleft.svg";
+import arrowRight from "../../assets/svg/arrowright.svg";
+
+import { MdArrowRightAlt } from "react-icons/md";
+import useScrollTop from "../../components/useTopScroll";
 
 const Details = [
   {
@@ -66,6 +75,7 @@ const Details2 = [
 ];
 
 const About = () => {
+  useScrollTop();
   return (
     <>
       {/* Banner Section****** */}
@@ -80,13 +90,15 @@ const About = () => {
         <HeroSection
           Details={{
             Heading1: "TURNING SPACES FOR BETTER LIVING",
-            Heading2:
-              "Experience the Art of Exellent Transformation in Renovation.",
+            Heading2: "Experience the Art of Exellent Transformation in",
+            Span: " Renovation.",
             Para: "Welcome to a world where innovation meets your goals, where we transform your dreams into remarkable, market-ready spaces. Bijliwala Contractors Canada is a company that began its journey in 2000 with a simple vision-to transform ordinary spaces into extra ordinary living. From cafe transformations to restaurant upgrades, our impact is felt all over.",
-            Para2: "Start your transformation today.",
             // Icon: HeroIcon,
             Image: HeroImage,
-            Button: "contact us",
+            Button: {
+              Name: "contact us",
+              Src: "/Contact",
+            },
           }}
         />
       </section>
@@ -94,11 +106,71 @@ const About = () => {
       {/* Services Section******* */}
       <section className="layout-section">
         <div className="max-width">
-          <h2 className="heading-h2">OUR SERVICES</h2>
-          <h3 className="heading-h3">
+          <h2 className="heading-h2 md:text-start text-center">OUR SERVICES</h2>
+          <h3 className="heading-h3 md:text-start text-center">
             Winning <span className="text-[#8E7861]">Strategy</span>
           </h3>
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 md:mt-20 mt-10">
+          {/* slider for mobile****** */}
+          <div className="md:hidden md:mt-20 mt-10">
+            <Swiper
+              loop={true}
+              autoplay={{
+                delay: 4000,
+              }}
+              pagination={{
+                el: "#bullets-Services",
+              }}
+              navigation={{
+                prevEl: ".prev-btn",
+                nextEl: ".next-btn",
+              }}
+              modules={[Pagination, Autoplay, Navigation]}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }}
+            >
+              {Details.map((details) => {
+                return (
+                  <SwiperSlide>
+                    <Card1 Details={details} Position="Center" />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+
+            {/* swiper button and pagination customization***** */}
+            <div className="md:mt-16 mt-5 flex items-center gap-5 justify-center">
+              {/* left arrow*** */}
+              <div className="md:w-[35px] w-[22px] cursor-pointer prev-btn">
+                <img
+                  src={arrowLeft}
+                  alt="arrow-left-vecotr"
+                  className="w-full h-full"
+                />
+              </div>
+              {/* indicators***** */}
+              <span id="bullets-Services"></span>
+
+              {/* right arrows***** */}
+              <div className="md:w-[35px] w-[22px] cursor-pointer next-btn">
+                <img
+                  src={arrowRight}
+                  alt="arrow-right-vecotr"
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* grid view for desktop**** */}
+          <div className="md:grid lg:grid-cols-4 md:grid-cols-3 hidden gap-5 md:mt-20 mt-10">
             {Details.map((details) => {
               return <Card1 Details={details} Position="Center" />;
             })}
@@ -109,8 +181,8 @@ const About = () => {
       {/* Team Section******* */}
       <section className="layout-section">
         <div className="max-width">
-          <h2 className="heading-h2">OUR TEAM</h2>
-          <h3 className="heading-h3">
+          <h2 className="heading-h2 md:text-start text-center">OUR TEAM</h2>
+          <h3 className="heading-h3 md:text-start text-center">
             Meet the <span className="text-[#8E7861]">Experts</span>
           </h3>
           <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 md:mt-20 mt-10">
@@ -120,32 +192,34 @@ const About = () => {
           </div>
 
           <div className="flex justify-center md:mt-20 mt-10">
-            <button className="common-btn">GET AN ONSITE INSPECTION</button>
+            <button className="common-btn flex items-center justify-center">
+              GET AN ONSITE INSPECTION <MdArrowRightAlt size={25} />
+            </button>
           </div>
         </div>
       </section>
 
       {/* Testimonal Section******* */}
-      <section className="layout-section">
+      {/* <section className="layout-section">
         <SectionHeading
           Heading1={"TESTIMONIALS"}
           Heading2={"Happy Client Experiences"}
         />
-        <div className="md:mt-20 mt-10 md:px-0 px-4">
+        <div className=" md:!mt-20 !mt-10 lg:px-0 px-4">
           <Testimonal />
         </div>
-      </section>
+      </section> */}
 
       {/* Brands Section***** */}
-      <section className="layout-section">
+      {/* <section className="layout-section">
         <SectionHeading
-          Heading1={"OUR SUCCESSFUL COLLABORATIONS"}
-          Heading2={"Partners who trust us "}
+          Heading1={"TRUSTED PARTNERS"}
+          Heading2={"Collaborations for Shared Success"}
         />
         <div className="md:mt-20 mt-10">
           <BrandSection />
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

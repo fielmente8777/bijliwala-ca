@@ -5,7 +5,7 @@ import { MdOutlinePlayCircleOutline } from "react-icons/md";
 const VideoSection = () => {
   return (
     <div
-      className="flex justify-center items-center lg:min-h-[574px] md:h-[400px] h-[280px]"
+      className="max-w-[1600px] mx-auto flex justify-center items-center lg:min-h-[574px] md:h-[400px] h-[280px]"
       style={{
         backgroundImage: `url(${videoPreviewImage})`,
         backgroundRepeat: "no-repeat",

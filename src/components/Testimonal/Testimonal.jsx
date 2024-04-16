@@ -7,6 +7,9 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import arrowLeft from "../../assets/svg/arrowleft.svg";
 import arrowRight from "../../assets/svg/arrowright.svg";
 
+import "swiper/css";
+import "swiper/css/pagination";
+
 const Testimonal = () => {
   return (
     <div>
@@ -33,12 +36,11 @@ const Testimonal = () => {
             spaceBetween: 20,
           },
         }}
-        className="px-36"
       >
         {new Array(5).fill("").map(() => {
           return (
             <SwiperSlide>
-              <div className="bg-[#1B1B1B] px-6 py-4">
+              <div className="bg-[#1B1B1B] px-6 py-10">
                 <div>
                   <div className="flex justify-center">
                     <ReactStars
