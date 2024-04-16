@@ -83,7 +83,7 @@ const ContactSection = () => {
         <div className="lg:w-[60%]">
           <form onSubmit={handleSubmit} className="border border-[#473C30] p-8">
             <h2 className="heading-h2 !text-white ">
-              Lorem <span className="text-[#8e7861]">Ipsum</span>
+              Get in <span className="text-[#8e7861]">Touch</span>
             </h2>
             <div className="mt-5 flex flex-col gap-5">
               {/* Name And Phone*** */}
