@@ -65,7 +65,7 @@ const OurWork = () => {
         <div className="max-width">
           <h2 className="heading-h2">OUR PORTFOLIO</h2>
           <h3 className="heading-h3">
-            Lorem Ipsum is a<span className="text-[#8E7861]"> Demo Text </span>
+            Demonstrating Our  <span className="text-[#8E7861]">Expertise and Excellence </span>
           </h3>
 
           <div className="hidden md:flex flex-col gap-20 md:mt-20 mt-10 ]">

@@ -12,13 +12,15 @@ import arrowRight from "../../../assets/svg/arrowright.svg";
 import { MdArrowRightAlt } from "react-icons/md";
 
 import { Link } from "react-router-dom";
-
+import ReactPlayer from 'react-player/youtube'
 export const HomeBanner = () => {
+
+
   return (
     <>
       <div className="max-width lg:flex justify-end relative pb-10">
         <div className="max-w-[1030px]">
-          <Swiper
+          {/* <Swiper
             loop={true}
             slidesPerView={1}
             autoplay={{
@@ -46,7 +48,25 @@ export const HomeBanner = () => {
                 </SwiperSlide>
               );
             })}
-          </Swiper>
+          </Swiper> */}
+          <div className="md:h-[630px] h-[280px] lg:w-[1030px] ">
+            <ReactPlayer
+              width={"100%"}
+              height={"100%"}
+
+              // className="w-[1030px] max-md:w-full h-[100%]"
+              url='https://www.youtube.com/embed/QDPXrp9dCQI'
+              playing={true}
+              loop={true}
+              controls={true}
+              muted={true}
+              Autoplay={true}
+            />
+            {/* <iframe
+              className="w-[1030px] max-md:w-full h-[100%]"
+              src="https://www.youtube.com/embed/QDPXrp9dCQI?autoplay=1&mute=1&loop=1&vq=hd1080"
+              frameborder="0" allowfullscreen></iframe> */}
+          </div>
         </div>
 
         <div className="lg:absolute top-32 left-0 lg:w-[315px] w-[90%] mx-auto lg:h-[458px]  bg-[#1B1B1B] p-2 z-[100]">
@@ -79,8 +99,7 @@ export const HomeBanner = () => {
         </div>
       </div>
       {/* swiper button and pagination customization***** */}
-      <div className="md:mt-5 mt-5 flex items-center gap-5 justify-center">
-        {/* left arrow*** */}
+      {/* <div className="md:mt-5 mt-5 flex items-center gap-5 justify-center">
         <div className="md:w-[35px] w-[22px] cursor-pointer prev-btn">
           <img
             src={arrowLeft}
@@ -88,10 +107,8 @@ export const HomeBanner = () => {
             className="w-full h-full"
           />
         </div>
-        {/* indicators***** */}
         <span id="bullets-home-banner"></span>
 
-        {/* right arrows***** */}
         <div className="md:w-[35px] w-[22px] cursor-pointer next-btn">
           <img
             src={arrowRight}
@@ -99,7 +116,7 @@ export const HomeBanner = () => {
             className="w-full h-full"
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

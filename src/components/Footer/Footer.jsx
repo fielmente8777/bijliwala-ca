@@ -9,18 +9,18 @@ const Footer = () => {
       <div className="max-width">
         <div className="max-md:mr-2.5 max-md:max-w-full">
           <div className="flex gap-20 max-lg:flex-col max-md:gap-0 ">
-            <div className="flex flex-col w-[18%] max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col w-[160px]">
-                <img loading="lazy" src={Logo} className="w-full h-full" />
-                {/* <div className="mt-4">
+            {/* <div className="flex flex-col w-[18%] max-md:ml-0 max-md:w-full"> */}
+            {/* <div className="flex flex-col w-[160px]"> */}
+            {/* <img loading="lazy" src={Logo} className="w-full h-full" /> */}
+            {/* <div className="mt-4">
                   <p className="text-[1.5rem]">
                     Lorem Ipsum is simply dummy text.
                   </p>
                 </div> */}
-              </div>
-            </div>
+            {/* </div> */}
+            {/* </div> */}
 
-            <div className="flex flex-col  w-[30%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-[30%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col pt-1.5 text-base leading-6 text-opacity-60 max-md:mt-10">
                 <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px] max-md:mr-0.5 text-[#8E7861]">
                   <h3>Contact</h3>
@@ -64,7 +64,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col w-[20%] ml-5 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col lg:items-center w-[30%] ml-5 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col py-0.5 text-base leading-6 whitespace-nowrap max-md:mt-10">
                 <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px] text-[#8E7861]">
                   <h3>Navigation</h3>
@@ -220,26 +220,26 @@ const Footer = () => {
             </div>
           </div> */}
         </div>
-      </div>
+      </div >
 
       {/* Phone******** */}
-      <Link
+      <Link Link
         to={`tel:${4164077755}`}
         target="_blank"
-        className="whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+        className="max-md:hidden whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
-        <span className="sr-only">what's app</span> <FaPhone />
-      </Link>
+        <span className="sr-only">what's app</span> <FaPhone className="transform rotate-[100deg]" />
+      </Link >
 
       {/* Whats app******** */}
-      <Link
+      <Link Link
         to={`https://wa.me/${+14164077755}`}
         target="_blank"
         className="whatsapp-button inline-block fixed bottom-[20px] right-[20px] w-[50px] h-[50px] bg-[#4DC251] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
         <span className="sr-only">what's app</span> <FaWhatsapp />
-      </Link>
-    </footer>
+      </Link >
+    </footer >
   );
 };
 

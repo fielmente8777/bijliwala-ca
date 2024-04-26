@@ -26,16 +26,16 @@ const Testimonal = () => {
           nextEl: ".next-btn",
         }}
         modules={[Pagination, Autoplay, Navigation]}
-        breakpoints={{
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        }}
+      // breakpoints={{
+      //   768: {
+      //     slidesPerView: 2,
+      //     spaceBetween: 20,
+      //   },
+      //   1024: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 20,
+      //   },
+      // }}
       >
         {new Array(5).fill("").map(() => {
           return (

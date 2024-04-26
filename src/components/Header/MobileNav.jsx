@@ -30,7 +30,7 @@ export const MobileNav = ({ open, setOpen }) => {
       className="fixed top-0 right-0 bg-white h-full z-10"
       style={{
         width: open ? "300px" : "0",
-        transition: "all 1s",
+        transition: "all .3s",
         // opacity: open ? 1 : 0,
       }}
     >

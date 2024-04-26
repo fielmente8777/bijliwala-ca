@@ -79,12 +79,12 @@ const About = () => {
   return (
     <>
       {/* Banner Section****** */}
-      <Banner
+      {/* <Banner
         Details={{
           Heading: "About Us",
           Image: AboutImg,
         }}
-      />
+      /> */}
       {/* Connect Section***** */}
       <section className="layout-section">
         <HeroSection

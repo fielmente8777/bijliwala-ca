@@ -29,20 +29,21 @@ const Portfolio = [
     Image: Portfolio3,
   },
   {
-    Heading1: "RETAIL OUTLET",
-    Heading2: "Indian Frootland",
+    Heading1: "RESTAURANT",
+    Heading2: "Desi bar and grills",
     Image: Portfolio1,
   },
   {
-    Heading1: "CLUB",
-    Heading2: "Club Kolkata",
+    Heading1: "RESTAURANT",
+    Heading2: "Hakka club",
     Image: Portfolio2,
   },
   {
     Heading1: "RESTAURANT",
-    Heading2: "Karahi Point",
+    Heading2: "Ikbar",
     Image: Portfolio3,
   },
+
 ];
 
 const PortfolioSection = () => {

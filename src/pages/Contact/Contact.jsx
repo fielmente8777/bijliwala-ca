@@ -57,12 +57,12 @@ export const Contact = () => {
   useScrollTop();
   return (
     <div>
-      <Banner
+      {/* <Banner
         Details={{
           Heading: "Contact Us",
           Image: ContactImg,
         }}
-      />
+      /> */}
 
       <section className="layout-section">
         <div className="max-width">
