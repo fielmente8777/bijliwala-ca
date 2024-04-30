@@ -90,7 +90,7 @@ export const Contact = () => {
                 <div className="flex flex-col gap-5 mt-10">
                   <div className="flex items-center gap-4">
                     <FaLocationDot className="text-[2rem] text-[#8e7861]" />
-                    <p className="para">778 NE 84th Canada</p>
+                    <p className="para">219 Gardenbrooke Trail, Brampton, Ontario, L6P3C9</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <FaPhoneAlt className="text-[2rem] text-[#8e7861]" />

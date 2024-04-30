@@ -16,6 +16,10 @@ import arrowRight from "../../assets/svg/arrowright.svg";
 import { Link } from "react-router-dom";
 import useScrollTop from "../../components/useTopScroll";
 
+
+import ReactPlayer from 'react-player/youtube'
+
+
 const Wroks = [
   {
     Heading1: "CLUB",
@@ -53,12 +57,24 @@ const OurWork = () => {
   useScrollTop();
   return (
     <>
-      <Banner
-        Details={{
-          Heading: "OUR WORK",
-          Image: WorkImg,
-        }}
-      />
+      <div className="md:h-[630px] h-[280px] lg:w-[1030px] mx-auto">
+        <ReactPlayer
+          width={"100%"}
+          height={"100%"}
+
+          // className="w-[1030px] max-md:w-full h-[100%]"
+          url='https://www.youtube.com/embed/QDPXrp9dCQI'
+          playing={true}
+          loop={true}
+          controls={true}
+          muted={true}
+          Autoplay={true}
+        />
+        {/* <iframe
+              className="w-[1030px] max-md:w-full h-[100%]"
+              src="https://www.youtube.com/embed/QDPXrp9dCQI?autoplay=1&mute=1&loop=1&vq=hd1080"
+              frameborder="0" allowfullscreen></iframe> */}
+      </div>
 
       {/* Works Cars Section*** */}
       <section className="layout-section">

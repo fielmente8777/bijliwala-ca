@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { HomeBanner } from "./components/HomeBanner";
+import React, { Suspense, } from "react";
+// import { HomeBanner } from "./components/HomeBanner";
 import HeroSection from "../../components/HeroSections/HeroSection";
 
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
@@ -18,13 +18,18 @@ import { Link } from "react-router-dom";
 
 import useScrollTop from "../../components/useTopScroll";
 
+const HomeBanner = React.lazy(() => import("./components/HomeBanner"));
+
 const Home = () => {
   useScrollTop();
   return (
     <main>
       {/* Home Banner**** */}
       <section>
-        <HomeBanner />
+
+        <Suspense fallback={<div className="h-[640px] bg-gray-300"></div>}>
+          <HomeBanner />
+        </Suspense>
       </section>
 
       {/* Project Section***** */}

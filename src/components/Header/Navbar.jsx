@@ -59,6 +59,7 @@ const Navbar = () => {
         >
           <img
             loading="lazy"
+            alt="bijliwala"
             src={Logo}
             className="shrink-0 aspect-[1.33] w-[91px]"
           />
@@ -101,6 +102,7 @@ const Navbar = () => {
                     src={Icons.Icon}
                     alt={`${Icons}-vector`}
                     className="w-full h-full"
+                    logo="bijliwala"
                   />
                 </div>
               </Link>

@@ -13,7 +13,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 import { Link } from "react-router-dom";
 import ReactPlayer from 'react-player/youtube'
-export const HomeBanner = () => {
+const HomeBanner = () => {
 
 
   return (
@@ -120,3 +120,6 @@ export const HomeBanner = () => {
     </>
   );
 };
+
+
+export default HomeBanner;

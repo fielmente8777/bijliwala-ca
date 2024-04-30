@@ -5,7 +5,7 @@ const Card2 = ({ Details }) => {
   return (
     <div className="min-h-[362px] bg-[#1B1B1B] px-4 py-4">
       <div className="h-[266px]">
-        <img src={Details.Image} alt="" className="w-full h-full rounded-md" />
+        <img src={Details.Image} alt="details" className="w-full h-full rounded-md" />
       </div>
       <div className="mt-6">
         <h2 className="text-[2.4rem] font-bold text-center text-[#8E7861] capitalize">
