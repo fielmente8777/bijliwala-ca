@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Banner from "../../components/PageBanner/Banner";
-import ContactImg from "../../assets/Images/ContactImage.png";
+import ContactImg from "../../assets/Images/ContactImage.webp";
 import axios from "axios";
 
 import { FaUser, FaPhoneAlt } from "react-icons/fa";

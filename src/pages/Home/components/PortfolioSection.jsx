@@ -6,8 +6,8 @@ import arrowLeft from "../../../assets/svg/arrowleft.svg";
 import arrowRight from "../../../assets/svg/arrowright.svg";
 
 import Portfolio1 from "../../../assets/Images/portfolio1.png";
-import Portfolio2 from "../../../assets/Images/portfolio2.png";
-import Portfolio3 from "../../../assets/Images/portfolio3.png";
+import Portfolio2 from "../../../assets/Images/portfolio2.webp";
+import Portfolio3 from "../../../assets/Images/portfolio3.webp";
 
 import { MdArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";

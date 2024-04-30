@@ -1,4 +1,4 @@
-import React, { Suspense, } from "react";
+import React from "react";
 // import { HomeBanner } from "./components/HomeBanner";
 import HeroSection from "../../components/HeroSections/HeroSection";
 
@@ -10,15 +10,13 @@ import ExpertiseSection from "./components/ExpertiseSection";
 import VideoSection from "./components/Video";
 import PortfolioSection from "./components/PortfolioSection";
 
-import HeroImage from "../../assets/Images/HeroImage.png";
+import HeroImage from "../../assets/Images/HeroImage.webp";
 import HeroIcon from "../../assets/messure.svg";
 
-import { MdArrowRightAlt } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 import useScrollTop from "../../components/useTopScroll";
 
-const HomeBanner = React.lazy(() => import("./components/HomeBanner"));
+import HomeBanner from "./components/HomeBanner";
 
 const Home = () => {
   useScrollTop();
@@ -27,9 +25,7 @@ const Home = () => {
       {/* Home Banner**** */}
       <section>
 
-        <Suspense fallback={<div className="h-[640px] bg-gray-300"></div>}>
-          <HomeBanner />
-        </Suspense>
+        <HomeBanner />
       </section>
 
       {/* Project Section***** */}

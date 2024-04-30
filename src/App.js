@@ -4,46 +4,31 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import { Contact } from "./pages/Contact/Contact";
 import About from "./pages/About/About";
-import Blog from "./pages/Blogs/Blog";
 import OurWork from "./pages/OurWrok/OurWork";
 import { Privacy } from "./pages/Privacy/Privacy";
 import Terms from "./pages/Terms/Terms";
-import { useEffect, useState } from "react";
 function App() {
 
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000); // Adjust the delay time as needed
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <>
       {/* <div className="scroll-watcher"></div> */}
 
-      {
-        loading ? "loding..." :
-          <>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/About" element={<About />} />
-              <Route path="/work" element={<OurWork />} />
-              {/* <Route path="/Blogs" element={<Blog />} /> */}
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/Privacy" element={<Privacy />} />
-              <Route path="/Terms" element={<Terms />} />
-            </Routes>
-            <Footer />
-          </>
-
-      }
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/work" element={<OurWork />} />
+        {/* <Route path="/Blogs" element={<Blog />} /> */}
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Privacy" element={<Privacy />} />
+        <Route path="/Terms" element={<Terms />} />
+      </Routes>
+      <Footer />
     </>
+
+
   );
 }
 

@@ -1,10 +1,11 @@
 import React from "react";
 import "./Work.scss";
 import Banner from "../../components/PageBanner/Banner";
-import WorkImg from "../../assets/Images/ContactImage.png";
-import workImg1 from "../../assets/Images/portfolio2.png";
-import workImg2 from "../../assets/Images/portfolio3.png";
+import WorkImg from "../../assets/Images/ContactImage.webp";
+import workImg1 from "../../assets/Images/portfolio2.webp";
+import workImg2 from "../../assets/Images/portfolio3.webp";
 import workImg3 from "../../assets/Images/portfolio1.png";
+import LazyLoad from 'react-lazy-load';
 
 import { MdArrowRightAlt } from "react-icons/md";
 
@@ -88,13 +89,15 @@ const OurWork = () => {
             {Wroks.map((Details) => {
               return (
                 <div className="work-card">
-                  <div className="lg:w-[70%] lg:h-[600px] sm:h-[450px] h-[260px]">
+                  {/* <div className="lg:w-[70%] lg:h-[600px] sm:h-[450px] h-[260px]"> */}
+                  <LazyLoad className="lg:w-[70%] lg:h-[600px] sm:h-[450px] h-[260px]" offset={300} threshold={0.95} >
                     <img
                       src={Details.Image}
                       alt="work-Img"
                       className="w-full h-full"
                     />
-                  </div>
+                  </LazyLoad>
+                  {/* </div> */}
                   <div className="lg:w-[30%] flex flex-col gap-6 ">
                     <div>
                       <h2 className="heading-h2">{Details.Heading1}</h2>
