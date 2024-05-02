@@ -9,6 +9,7 @@ import { FaLocationDot, FaMessage, aMessage } from "react-icons/fa6";
 
 import { MdArrowRightAlt } from "react-icons/md";
 import useScrollTop from "../../components/useTopScroll";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   const [userName, setUserName] = useState("");
@@ -44,10 +45,8 @@ export const Contact = () => {
         setUserMessage("");
         setUserPhone("");
         setFormRes(false);
-        alert("message sended");
       } else {
         setFormRes(false);
-        alert("somethin wrong!");
       }
     } catch (error) {
       console.log(error);
@@ -88,18 +87,18 @@ export const Contact = () => {
                   Contact <span className="text-[#8e7861]">us</span>
                 </h2>
                 <div className="flex flex-col gap-5 mt-10">
-                  <div className="flex items-center gap-4">
+                  <Link to="https://www.google.com/maps/place/BIJLIWALA+LTD./@43.794234,-79.6812453,15z/data=!4m6!3m5!1s0x882b23ae3fd8488b:0x551f69fc56aa7472!8m2!3d43.794234!4d-79.6812453!16s%2Fg%2F11s66b595l?entry=ttu" target="_blank" className="flex items-center gap-4">
                     <FaLocationDot className="text-[2rem] text-[#8e7861]" />
                     <p className="para">219 Gardenbrooke Trail, Brampton, Ontario, L6P3C9</p>
-                  </div>
-                  <div className="flex items-center gap-4">
+                  </Link>
+                  <Link to="tel:+14164077755" className="flex items-center gap-4">
                     <FaPhoneAlt className="text-[2rem] text-[#8e7861]" />
                     <p className="para">416-407-7755</p>
-                  </div>
-                  <div className="flex items-center gap-4">
+                  </Link>
+                  <Link to="mailto:lagancontractor@gmail.com" className="flex items-center gap-4">
                     <IoMailOpen className="text-[2rem] text-[#8e7861]" />
                     <p className="para">Lagancontractor</p>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

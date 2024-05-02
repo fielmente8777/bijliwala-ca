@@ -13,7 +13,7 @@ import PhoneIcon from "../../assets/svg/phone.svg";
 const SocialIcons = [
   {
     Icon: instagram,
-    Src: "/",
+    Src: "https://www.instagram.com/bijliwala_contracting_canada/",
   },
 ];
 
@@ -90,6 +90,7 @@ const Navbar = () => {
             return (
               <Link
                 to={Icons.Src}
+                target="_blank"
                 className="w-[40px] h-[40px] border border-gray-700 rounded-full flex justify-center  items-center hover:bg-[#8E7861]"
               >
                 <div className="w-[12px]">
