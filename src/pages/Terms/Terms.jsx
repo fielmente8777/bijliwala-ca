@@ -1,5 +1,5 @@
 import React from "react";
-import TermsImg from "../../assets/Images/ContactImage.png";
+import TermsImg from "../../assets/Images/ContactImage.webp";
 import Banner from "../../components/PageBanner/Banner";
 
 const TermsArr = [

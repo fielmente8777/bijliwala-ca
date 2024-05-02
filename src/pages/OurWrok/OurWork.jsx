@@ -1,10 +1,11 @@
 import React from "react";
 import "./Work.scss";
 import Banner from "../../components/PageBanner/Banner";
-import WorkImg from "../../assets/Images/ContactImage.png";
-import workImg1 from "../../assets/Images/portfolio2.png";
-import workImg2 from "../../assets/Images/portfolio3.png";
+import WorkImg from "../../assets/Images/ContactImage.webp";
+import workImg1 from "../../assets/Images/portfolio2.webp";
+import workImg2 from "../../assets/Images/portfolio3.webp";
 import workImg3 from "../../assets/Images/portfolio1.png";
+import LazyLoad from 'react-lazy-load';
 
 import { MdArrowRightAlt } from "react-icons/md";
 
@@ -15,6 +16,10 @@ import arrowLeft from "../../assets/svg/arrowleft.svg";
 import arrowRight from "../../assets/svg/arrowright.svg";
 import { Link } from "react-router-dom";
 import useScrollTop from "../../components/useTopScroll";
+
+
+import ReactPlayer from 'react-player/youtube'
+
 
 const Wroks = [
   {
@@ -53,12 +58,24 @@ const OurWork = () => {
   useScrollTop();
   return (
     <>
-      <Banner
-        Details={{
-          Heading: "OUR WORK",
-          Image: WorkImg,
-        }}
-      />
+      <div className="md:h-[630px] h-[280px] lg:w-[1030px] mx-auto">
+        <ReactPlayer
+          width={"100%"}
+          height={"100%"}
+
+          // className="w-[1030px] max-md:w-full h-[100%]"
+          url='https://www.youtube.com/embed/QDPXrp9dCQI'
+          playing={true}
+          loop={true}
+          controls={true}
+          muted={true}
+          Autoplay={true}
+        />
+        {/* <iframe
+              className="w-[1030px] max-md:w-full h-[100%]"
+              src="https://www.youtube.com/embed/QDPXrp9dCQI?autoplay=1&mute=1&loop=1&vq=hd1080"
+              frameborder="0" allowfullscreen></iframe> */}
+      </div>
 
       {/* Works Cars Section*** */}
       <section className="layout-section">
@@ -72,13 +89,15 @@ const OurWork = () => {
             {Wroks.map((Details) => {
               return (
                 <div className="work-card">
-                  <div className="lg:w-[70%] lg:h-[600px] sm:h-[450px] h-[260px]">
+                  {/* <div className="lg:w-[70%] lg:h-[600px] sm:h-[450px] h-[260px]"> */}
+                  <LazyLoad className="lg:w-[70%] lg:h-[600px] sm:h-[450px] h-[260px]" offset={300} threshold={0.95} >
                     <img
                       src={Details.Image}
                       alt="work-Img"
                       className="w-full h-full"
                     />
-                  </div>
+                  </LazyLoad>
+                  {/* </div> */}
                   <div className="lg:w-[30%] flex flex-col gap-6 ">
                     <div>
                       <h2 className="heading-h2">{Details.Heading1}</h2>

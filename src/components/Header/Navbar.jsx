@@ -58,9 +58,9 @@ const Navbar = () => {
           className="flex gap-5 text-sm font-medium tracking-wide leading-6 max-md:flex-wrap max-md:max-w-full"
         >
           <img
-            loading="lazy"
+            alt="bijliwala"
             src={Logo}
-            className="shrink-0 aspect-[1.33] w-[91px]"
+            className="shrink-0 aspect-auto w-[91px]"
           />
         </Link>
         <ul className="hidden lg:flex gap-10">
@@ -83,11 +83,7 @@ const Navbar = () => {
               </li>
             );
           })}
-          {/* <Link to="/">HOME</Link>
-          <Link to="/About">ABOUT</Link>
-          <Link to="/Work">WORK</Link>
-          <Link to="/Blogs">BLOG</Link>
-          <Link to="/Contact">CONTACT</Link> */}
+
         </ul>
         <div className="hidden lg:flex gap-2 px-5 my-auto text-xs leading-3 uppercase">
           {SocialIcons.map((Icons) => {
@@ -101,6 +97,7 @@ const Navbar = () => {
                     src={Icons.Icon}
                     alt={`${Icons}-vector`}
                     className="w-full h-full"
+                    logo="bijliwala"
                   />
                 </div>
               </Link>

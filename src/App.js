@@ -4,14 +4,17 @@ import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import { Contact } from "./pages/Contact/Contact";
 import About from "./pages/About/About";
-import Blog from "./pages/Blogs/Blog";
 import OurWork from "./pages/OurWrok/OurWork";
 import { Privacy } from "./pages/Privacy/Privacy";
 import Terms from "./pages/Terms/Terms";
 function App() {
+
+
+
   return (
     <>
       {/* <div className="scroll-watcher"></div> */}
+
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -24,6 +27,8 @@ function App() {
       </Routes>
       <Footer />
     </>
+
+
   );
 }
 

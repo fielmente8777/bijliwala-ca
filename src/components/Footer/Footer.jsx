@@ -31,6 +31,7 @@ const Footer = () => {
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/b456b3a51b9cb4e604619b10bb48f103b7222d5fe069364a7375e3eae92b0933?"
                       className="shrink-0 my-auto w-7 aspect-square"
+                      alt="logo"
                     />
                     <div>
                       <p className="text-[1.5rem]">
@@ -43,6 +44,7 @@ const Footer = () => {
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/4771227803dd65304795c954315039c2381e870bbc3e37cdba5701adf3ee9bbe?"
                       className="shrink-0 w-7 aspect-square"
+                      alt="logo"
                     />
                     <div className="flex-auto my-auto">
                       <p className="text-[1.5rem]">416-407-7755</p>
@@ -53,6 +55,7 @@ const Footer = () => {
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/3d3315590916f2691ddf1861195c18d5941376f02f7d0d06e6a9ec84a791bb18?"
                       className="shrink-0 w-7 aspect-square"
+                      alt="logo"
                     />
                     <div className="grow my-auto">
                       <p className="text-[1.5rem]">
@@ -116,6 +119,7 @@ const Footer = () => {
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/c79a813472fc45d4ac136fc45a2c3cf7c99888cab40162d161e368ffd7574686?"
                     className="shrink-0 w-12 aspect-[1.04]"
+                    alt="logo"
                   />
                 </div>
                 <div className="mt-8 md:text-[24px] text-[1.8rem] font-[700] leading-[28px] max-md:mr-0 text-[#8E7861]">
@@ -192,6 +196,7 @@ const Footer = () => {
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1d39c014e943070322622bcd86f28622feddbd44fe8f90d727c57aedd727d36?"
                 className="shrink-0 my-auto w-3 aspect-square"
+                alt="logo"
               />
               <div className="flex md:text-[1.5rem] text-[1.3rem]">
                 <p>

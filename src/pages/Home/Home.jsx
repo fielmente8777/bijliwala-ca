@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { HomeBanner } from "./components/HomeBanner";
+import React from "react";
+// import { HomeBanner } from "./components/HomeBanner";
 import HeroSection from "../../components/HeroSections/HeroSection";
 
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
@@ -10,13 +10,13 @@ import ExpertiseSection from "./components/ExpertiseSection";
 import VideoSection from "./components/Video";
 import PortfolioSection from "./components/PortfolioSection";
 
-import HeroImage from "../../assets/Images/HeroImage.png";
+import HeroImage from "../../assets/Images/HeroImage.webp";
 import HeroIcon from "../../assets/messure.svg";
 
-import { MdArrowRightAlt } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 import useScrollTop from "../../components/useTopScroll";
+
+import HomeBanner from "./components/HomeBanner";
 
 const Home = () => {
   useScrollTop();
@@ -24,6 +24,7 @@ const Home = () => {
     <main>
       {/* Home Banner**** */}
       <section>
+
         <HomeBanner />
       </section>
 

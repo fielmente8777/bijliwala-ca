@@ -1,5 +1,5 @@
 import React from "react";
-import PrivacyImg from "../../assets/Images/ContactImage.png";
+import PrivacyImg from "../../assets/Images/ContactImage.webp";
 import Banner from "../../components/PageBanner/Banner";
 
 const Policy = [

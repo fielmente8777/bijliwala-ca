@@ -1,14 +1,15 @@
 import React from "react";
 import { MdArrowRightAlt } from "react-icons/md";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 const HeroSection = ({ Details }) => {
   return (
     <div className="max-width">
       <div className="flex lg:flex-row flex-col gap-8 items-center">
-        <div className="lg:w-[70%] w-[100%] lg:h-[580px] sm:h-[400px] h-[280px]">
+        <LazyLoad className="lg:w-[70%] w-[100%] lg:h-[580px] sm:h-[400px] h-[280px]" offset={300} threshold={0.95} >
           <img src={Details.Image} alt="image" className="w-full h-full" />
-        </div>
+        </LazyLoad>
         <div className="lg:w-[30%] w-[100%]">
           <div className="flex flex-col gap-5">
             <div>
