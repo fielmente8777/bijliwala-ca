@@ -6,8 +6,8 @@ import arrowLeft from "../../../assets/svg/arrowleft.svg";
 import arrowRight from "../../../assets/svg/arrowright.svg";
 
 import Portfolio1 from "../../../assets/Images/portfolio1.png";
-import Portfolio2 from "../../../assets/Images/portfolio2.png";
-import Portfolio3 from "../../../assets/Images/portfolio3.png";
+import Portfolio2 from "../../../assets/Images/portfolio2.webp";
+import Portfolio3 from "../../../assets/Images/portfolio3.webp";
 
 import { MdArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -29,20 +29,21 @@ const Portfolio = [
     Image: Portfolio3,
   },
   {
-    Heading1: "RETAIL OUTLET",
-    Heading2: "Indian Frootland",
+    Heading1: "RESTAURANT",
+    Heading2: "Desi bar and grills",
     Image: Portfolio1,
   },
   {
-    Heading1: "CLUB",
-    Heading2: "Club Kolkata",
+    Heading1: "RESTAURANT",
+    Heading2: "Hakka club",
     Image: Portfolio2,
   },
   {
     Heading1: "RESTAURANT",
-    Heading2: "Karahi Point",
+    Heading2: "Ikbar",
     Image: Portfolio3,
   },
+
 ];
 
 const PortfolioSection = () => {

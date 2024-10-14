@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import AboutImg from "../../assets/Images/ContactImage.png";
+import AboutImg from "../../assets/Images/ContactImage.webp";
 import Banner from "../../components/PageBanner/Banner";
 import HeroSection from "../../components/HeroSections/HeroSection";
-import HeroImage from "../../assets/Images/HeroImage.png";
+import HeroImage from "../../assets/Images/HeroImage.webp";
 import { Card1 } from "../../components/Cards/Card1";
 import Card2 from "../../components/Cards/Card2";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
@@ -27,6 +27,8 @@ import arrowRight from "../../assets/svg/arrowright.svg";
 
 import { MdArrowRightAlt } from "react-icons/md";
 import useScrollTop from "../../components/useTopScroll";
+
+
 
 const Details = [
   {
@@ -79,12 +81,12 @@ const About = () => {
   return (
     <>
       {/* Banner Section****** */}
-      <Banner
+      {/* <Banner
         Details={{
           Heading: "About Us",
           Image: AboutImg,
         }}
-      />
+      /> */}
       {/* Connect Section***** */}
       <section className="layout-section">
         <HeroSection
@@ -199,27 +201,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Testimonal Section******* */}
-      {/* <section className="layout-section">
-        <SectionHeading
-          Heading1={"TESTIMONIALS"}
-          Heading2={"Happy Client Experiences"}
-        />
-        <div className=" md:!mt-20 !mt-10 lg:px-0 px-4">
-          <Testimonal />
-        </div>
-      </section> */}
-
-      {/* Brands Section***** */}
-      {/* <section className="layout-section">
-        <SectionHeading
-          Heading1={"TRUSTED PARTNERS"}
-          Heading2={"Collaborations for Shared Success"}
-        />
-        <div className="md:mt-20 mt-10">
-          <BrandSection />
-        </div>
-      </section> */}
     </>
   );
 };

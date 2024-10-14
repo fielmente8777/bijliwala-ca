@@ -1,5 +1,5 @@
 import React from "react";
-import PrivacyImg from "../../assets/Images/ContactImage.png";
+import PrivacyImg from "../../assets/Images/ContactImage.webp";
 import Banner from "../../components/PageBanner/Banner";
 
 const Policy = [
@@ -46,8 +46,8 @@ export const Privacy = () => {
                     className="heading-h3"
                     style={{
                       borderLeft:
-                        index == Policy.length - 1 ? "4px solid #A52323" : "0",
-                      paddingLeft: Policy.length - 1 == index ? "0.6rem" : "0",
+                        index === Policy.length - 1 ? "4px solid #A52323" : "0",
+                      paddingLeft: Policy.length - 1 === index ? "0.6rem" : "0",
                     }}
                   >
                     {Details.Heading}

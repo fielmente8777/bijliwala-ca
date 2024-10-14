@@ -1,52 +1,31 @@
 import React from "react";
-import bannerImg from "../../../assets/Images/HomeBannerImage.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-
-import arrowLeft from "../../../assets/svg/arrowleft.svg";
-import arrowRight from "../../../assets/svg/arrowright.svg";
 
 import { MdArrowRightAlt } from "react-icons/md";
 
 import { Link } from "react-router-dom";
+import ReactPlayer from 'react-player/lazy'
+const HomeBanner = () => {
 
-export const HomeBanner = () => {
+
   return (
     <>
       <div className="max-width lg:flex justify-end relative pb-10">
         <div className="max-w-[1030px]">
-          <Swiper
-            loop={true}
-            slidesPerView={1}
-            autoplay={{
-              delay: 4000,
-            }}
-            pagination={{
-              el: "#bullets-home-banner",
-            }}
-            navigation={{
-              prevEl: ".prev-btn",
-              nextEl: ".next-btn",
-            }}
-            modules={[Pagination, Autoplay, Navigation]}
-          >
-            {new Array(3).fill("").map(() => {
-              return (
-                <SwiperSlide>
-                  <div className="md:h-[630px] h-[280px]">
-                    <img
-                      src={bannerImg}
-                      alt="banner-photo"
-                      className="w-full h-full"
-                    />
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+
+          <div className="md:h-[630px] h-[280px] lg:w-[1030px] ">
+            <ReactPlayer
+              width={"100%"}
+              height={"100%"}
+              url='https://www.youtube.com/embed/QDPXrp9dCQI'
+              playing={true}
+              loop={true}
+              controls={true}
+              muted={true}
+              Autoplay={true}
+              AllowCommunication={true}
+            />
+          </div>
         </div>
 
         <div className="lg:absolute top-32 left-0 lg:w-[315px] w-[90%] mx-auto lg:h-[458px]  bg-[#1B1B1B] p-2 z-[100]">
@@ -78,28 +57,9 @@ export const HomeBanner = () => {
           </div>
         </div>
       </div>
-      {/* swiper button and pagination customization***** */}
-      <div className="md:mt-5 mt-5 flex items-center gap-5 justify-center">
-        {/* left arrow*** */}
-        <div className="md:w-[35px] w-[22px] cursor-pointer prev-btn">
-          <img
-            src={arrowLeft}
-            alt="arrow-left-vecotr"
-            className="w-full h-full"
-          />
-        </div>
-        {/* indicators***** */}
-        <span id="bullets-home-banner"></span>
-
-        {/* right arrows***** */}
-        <div className="md:w-[35px] w-[22px] cursor-pointer next-btn">
-          <img
-            src={arrowRight}
-            alt="arrow-right-vecotr"
-            className="w-full h-full"
-          />
-        </div>
-      </div>
     </>
   );
 };
+
+
+export default HomeBanner;

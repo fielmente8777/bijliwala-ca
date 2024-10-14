@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Banner from "../../components/PageBanner/Banner";
-import ContactImg from "../../assets/Images/ContactImage.png";
+import ContactImg from "../../assets/Images/ContactImage.webp";
 import axios from "axios";
 
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { FaLocationDot, FaMessage, aMessage } from "react-icons/fa6";
 
 import { MdArrowRightAlt } from "react-icons/md";
 import useScrollTop from "../../components/useTopScroll";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   const [userName, setUserName] = useState("");
@@ -44,10 +45,8 @@ export const Contact = () => {
         setUserMessage("");
         setUserPhone("");
         setFormRes(false);
-        alert("message sended");
       } else {
         setFormRes(false);
-        alert("somethin wrong!");
       }
     } catch (error) {
       console.log(error);
@@ -57,12 +56,12 @@ export const Contact = () => {
   useScrollTop();
   return (
     <div>
-      <Banner
+      {/* <Banner
         Details={{
           Heading: "Contact Us",
           Image: ContactImg,
         }}
-      />
+      /> */}
 
       <section className="layout-section">
         <div className="max-width">
@@ -88,28 +87,23 @@ export const Contact = () => {
                   Contact <span className="text-[#8e7861]">us</span>
                 </h2>
                 <div className="flex flex-col gap-5 mt-10">
-                  <div className="flex items-center gap-4">
+                  <Link to="https://www.google.com/maps/place/BIJLIWALA+LTD./@43.794234,-79.6812453,15z/data=!4m6!3m5!1s0x882b23ae3fd8488b:0x551f69fc56aa7472!8m2!3d43.794234!4d-79.6812453!16s%2Fg%2F11s66b595l?entry=ttu" target="_blank" className="flex items-center gap-4">
                     <FaLocationDot className="text-[2rem] text-[#8e7861]" />
-                    <p className="para">778 NE 84th Canada</p>
-                  </div>
-                  <div className="flex items-center gap-4">
+                    <p className="para">219 Gardenbrooke Trail, Brampton, Ontario, L6P3C9</p>
+                  </Link>
+                  <Link to="tel:+14164077755" className="flex items-center gap-4">
                     <FaPhoneAlt className="text-[2rem] text-[#8e7861]" />
                     <p className="para">416-407-7755</p>
-                  </div>
-                  <div className="flex items-center gap-4">
+                  </Link>
+                  <Link to="mailto:lagancontractor@gmail.com" className="flex items-center gap-4">
                     <IoMailOpen className="text-[2rem] text-[#8e7861]" />
                     <p className="para">Lagancontractor</p>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* form section**** */}
-<<<<<<< HEAD
-            <div className="lg:w-[40%] md:w-[50%]">
-              <form className="border border-[#8E7861] px-12 py-10 font-bold">
-                <h2 className="heading-h3 !text-white ">Get in <span className="text-[#8E7861] text">touch</span></h2>
-=======
             <div className="lg:w-[35%] md:w-[50%]">
               <form
                 onSubmit={handleSubmit}
@@ -118,7 +112,6 @@ export const Contact = () => {
                 <h2 className="heading-h2 !text-white !capitalize ">
                   Get in <span className="text-[#8E7861]">Touch</span>
                 </h2>
->>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                 <div className="mt-5 flex flex-col gap-5">
                   {/* Name And Phone*** */}
                   <div className="grid sm:grid-cols-1 gap-5 w-full">
@@ -131,15 +124,11 @@ export const Contact = () => {
                           type="text"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-<<<<<<< HEAD
-                          placeholder="Your Name"
-=======
                           placeholder="Your Name*"
                           value={userName}
                           onChange={(e) => {
                             setUserName(e.target.value);
                           }}
->>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
@@ -152,15 +141,11 @@ export const Contact = () => {
                           type="number"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-<<<<<<< HEAD
-                          placeholder="Your Phone Number"
-=======
                           placeholder="Your Phone Number*"
                           value={userPhone}
                           onChange={(e) => {
                             setUserPhone(e.target.value);
                           }}
->>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
@@ -177,15 +162,11 @@ export const Contact = () => {
                           type="email"
                           required
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-<<<<<<< HEAD
-                          placeholder="Your Email"
-=======
                           placeholder="Your Email*"
                           value={userEmail}
                           onChange={(e) => {
                             setUserEmail(e.target.value);
                           }}
->>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
@@ -216,26 +197,17 @@ export const Contact = () => {
                           required
                           rows={8}
                           className="w-full h-full bg-transparent outline-none text-[1.5rem] font-semibold"
-<<<<<<< HEAD
-                          placeholder="Message"
-=======
                           placeholder="Message*"
                           value={userMessage}
                           onChange={(e) => {
                             setUserMessage(e.target.value);
                           }}
->>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                         />
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="mt-6">
-<<<<<<< HEAD
-                  <button className="common-btn">
-                    Submit
-                  </button>
-=======
                   {formRes ? (
                     <button className="common-btn flex items-center gap-3">
                       Loading..... <MdArrowRightAlt size={25} />
@@ -245,7 +217,6 @@ export const Contact = () => {
                       SUBMIT <MdArrowRightAlt size={25} />
                     </button>
                   )}
->>>>>>> 351d025f577f55c1081266627f5a98eb0958e72a
                 </div>
               </form>
             </div>

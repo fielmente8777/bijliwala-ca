@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { HomeBanner } from "./components/HomeBanner";
-import HeroSection from "../../components/HeroSections/HeroSection";
+import React from "react";
+// import { HomeBanner } from "./components/HomeBanner";
 
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import ContactSection from "./components/ContactSection";
@@ -10,13 +9,14 @@ import ExpertiseSection from "./components/ExpertiseSection";
 import VideoSection from "./components/Video";
 import PortfolioSection from "./components/PortfolioSection";
 
-import HeroImage from "../../assets/Images/HeroImage.png";
+import HeroImage from "../../assets/Images/HeroImage.webp";
 import HeroIcon from "../../assets/messure.svg";
 
-import { MdArrowRightAlt } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 import useScrollTop from "../../components/useTopScroll";
+
+import HomeBanner from "./components/HomeBanner";
+import AboutCompnent from "../../components/HeroSections/AboutCompnent";
 
 const Home = () => {
   useScrollTop();
@@ -24,12 +24,14 @@ const Home = () => {
     <main>
       {/* Home Banner**** */}
       <section>
+
         <HomeBanner />
       </section>
 
       {/* Project Section***** */}
       <section className="layout-section">
-        <HeroSection
+        <AboutCompnent
+          width="max-w-[1150px] mx-auto max-md:px-3"
           Details={{
             Heading1: "ABOUT US",
             Heading2: "Complete Design, Build and Turnkey ",
@@ -110,7 +112,7 @@ const Home = () => {
           Heading2={"Happy Client "}
           SPAN={"Experiences"}
         />
-        <div className="max-w-[1600px] mx-auto md:!mt-20 !mt-10 lg:px-0 px-4">
+        <div className="max-w-4xl mx-auto md:!mt-20 !mt-10 lg:px-0 px-4">
           <Testimonal />
         </div>
       </section>

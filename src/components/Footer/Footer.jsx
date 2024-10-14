@@ -1,51 +1,88 @@
-import React from "react";
-import Logo from "../../assets/logo 2.svg";
+
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+
+  const host = "https://eazotel.eazotel.com/api/dashboard/editnewsletter"
+
+  const [email, setEmail] = useState();
+
+  useEffect(() => {
+    setEmail("")
+  })
+
+
+  const handleNewsletter = async () => {
+
+    const data = {
+      "Domain": 'bijliwala',
+      "email": email,
+    }
+    try {
+      const response = await fetch(host, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+
+        },
+        body: JSON.stringify(data)
+      });
+
+    } catch (error) {
+      console.log(error);
+    };
+
+    setEmail("");
+  }
+
+
+
   return (
     <footer className="bg-[#1B1B1B] layout-section !pb-5">
       <div className="max-width">
         <div className="max-md:mr-2.5 max-md:max-w-full">
           <div className="flex gap-20 max-lg:flex-col max-md:gap-0 ">
-            <div className="flex flex-col w-[18%] max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col w-[160px]">
-                <img loading="lazy" src={Logo} className="w-full h-full" />
-                {/* <div className="mt-4">
+            {/* <div className="flex flex-col w-[18%] max-md:ml-0 max-md:w-full"> */}
+            {/* <div className="flex flex-col w-[160px]"> */}
+            {/* <img loading="lazy" src={Logo} className="w-full h-full" /> */}
+            {/* <div className="mt-4">
                   <p className="text-[1.5rem]">
                     Lorem Ipsum is simply dummy text.
                   </p>
                 </div> */}
-              </div>
-            </div>
+            {/* </div> */}
+            {/* </div> */}
 
-            <div className="flex flex-col  w-[30%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-[30%] max-md:ml-0 max-md:w-full">
               <div className="flex flex-col pt-1.5 text-base leading-6 text-opacity-60 max-md:mt-10">
                 <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px] max-md:mr-0.5 text-[#8E7861]">
                   <h3>Contact</h3>
                 </div>
                 <div className="flex flex-col gap-4 text-[#C2C2C299] mt-5">
-                  <div className="flex gap-3 mt-5 leading-6 max-md:mr-1.5">
+                  <div className=" gap-3 mt-5 flex  items-start leading-6 max-md:mr-1.5">
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/b456b3a51b9cb4e604619b10bb48f103b7222d5fe069364a7375e3eae92b0933?"
-                      className="shrink-0 my-auto w-7 aspect-square"
+                      className="shrink-0 w-7 aspect-square"
+                      alt="logo"
                     />
-                    <div>
+                    <Link to="https://www.google.com/maps/place/BIJLIWALA+LTD./@43.794234,-79.6812453,15z/data=!4m6!3m5!1s0x882b23ae3fd8488b:0x551f69fc56aa7472!8m2!3d43.794234!4d-79.6812453!16s%2Fg%2F11s66b595l?entry=ttu" target="_blank">
                       <p className="text-[1.5rem]">
                         219 Gardenbrooke Trail, Brampton, Ontario, L6P3C9
                       </p>{" "}
-                    </div>
+                    </Link>
                   </div>
                   <div className="flex gap-3 mt-4">
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/4771227803dd65304795c954315039c2381e870bbc3e37cdba5701adf3ee9bbe?"
                       className="shrink-0 w-7 aspect-square"
+                      alt="logo"
                     />
-                    <div className="flex-auto my-auto">
-                      <p className="text-[1.5rem]">416-407-7755</p>
+                    <div className="  flex items-center">
+                      <Link to="tel:+14164077755" className="text-[1.5rem]">416-407-7755</Link>
                     </div>
                   </div>
                   <div className="flex gap-3 mt-4">
@@ -53,18 +90,19 @@ const Footer = () => {
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/3d3315590916f2691ddf1861195c18d5941376f02f7d0d06e6a9ec84a791bb18?"
                       className="shrink-0 w-7 aspect-square"
+                      alt="logo"
                     />
-                    <div className="grow my-auto">
-                      <p className="text-[1.5rem]">
+                    <div className="grow  flex items-center">
+                      <Link to="mailto:lagancontractor@gmail.com" className="text-[1.5rem]">
                         lagancontractor@gmail.com{" "}
-                      </p>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col w-[20%] ml-5 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col lg:items-center w-[30%] ml-5 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col py-0.5 text-base leading-6 whitespace-nowrap max-md:mt-10">
                 <div className="md:text-[24px] text-[1.8rem] font-[700] leading-[28px] text-[#8E7861]">
                   <h3>Navigation</h3>
@@ -108,15 +146,20 @@ const Footer = () => {
                   <div className="flex-auto my-auto">
                     <input
                       type="text"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Your Email Address*"
                       className="text-[1.5rem] w-full outline-none bg-transparent"
                     />
                   </div>
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c79a813472fc45d4ac136fc45a2c3cf7c99888cab40162d161e368ffd7574686?"
-                    className="shrink-0 w-12 aspect-[1.04]"
-                  />
+                  <div onClick={handleNewsletter}>
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/c79a813472fc45d4ac136fc45a2c3cf7c99888cab40162d161e368ffd7574686?"
+                      className="shrink-0 w-12 aspect-[1.04]"
+                      alt="logo"
+                    />
+                  </div>
                 </div>
                 <div className="mt-8 md:text-[24px] text-[1.8rem] font-[700] leading-[28px] max-md:mr-0 text-[#8E7861]">
                   <h3>Follow US</h3>
@@ -150,7 +193,7 @@ const Footer = () => {
                       />
                     </svg>
                   </div> */}
-                  <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
+                  <Link to="https://www.instagram.com/bijliwala_contracting_canada/" target="_blank" className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
                     <svg
                       width="12"
                       height="12"
@@ -163,7 +206,7 @@ const Footer = () => {
                         fill="white"
                       />
                     </svg>
-                  </div>
+                  </Link>
                   {/* <div className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
                     <svg
                       width="12"
@@ -184,14 +227,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16" />
+        <div className="w-full h-[1px] bg-[#8E7861] my-10" />
         <div className="flex lg:flex-row flex-col gap-4 justify-between">
           <div className="flex gap-4 justify-between items-center">
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center text-[#C2C2C299]">
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1d39c014e943070322622bcd86f28622feddbd44fe8f90d727c57aedd727d36?"
-                className="shrink-0 my-auto w-3 aspect-square"
+                className="shrink-0 my-auto w-5 aspect-square"
+                alt="logo"
               />
               <div className="flex md:text-[1.5rem] text-[1.3rem]">
                 <p>
@@ -202,12 +246,12 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            {/* <div className="md:text-[1.5rem] text-[1.3rem]">
+            <div className="md:text-[1.5rem] text-[1.3rem] text-[#C2C2C299]">
               <p>All Rights Reserved</p>
-            </div> */}
+            </div>
           </div>
 
-          {/* <div className="flex justify-center items-center gap-6">
+          <div className="flex justify-center items-center gap-6">
             <div>
               <Link to="/Privacy" className="text-[1.5rem]">
                 Privacy Policy
@@ -218,28 +262,28 @@ const Footer = () => {
                 Terms & Conditions
               </Link>
             </div>
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div >
 
       {/* Phone******** */}
-      <Link
+      <Link Link
         to={`tel:${4164077755}`}
         target="_blank"
-        className="whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+        className="max-md:hidden whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
-        <span className="sr-only">what's app</span> <FaPhone />
-      </Link>
+        <span className="sr-only">what's app</span> <FaPhone className="transform rotate-[100deg]" />
+      </Link >
 
       {/* Whats app******** */}
-      <Link
+      <Link Link
         to={`https://wa.me/${+14164077755}`}
         target="_blank"
         className="whatsapp-button inline-block fixed bottom-[20px] right-[20px] w-[50px] h-[50px] bg-[#4DC251] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
         <span className="sr-only">what's app</span> <FaWhatsapp />
-      </Link>
-    </footer>
+      </Link >
+    </footer >
   );
 };
 

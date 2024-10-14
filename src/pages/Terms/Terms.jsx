@@ -1,5 +1,5 @@
 import React from "react";
-import TermsImg from "../../assets/Images/ContactImage.png";
+import TermsImg from "../../assets/Images/ContactImage.webp";
 import Banner from "../../components/PageBanner/Banner";
 
 const TermsArr = [
@@ -46,11 +46,11 @@ const Terms = () => {
                     className="heading-h3"
                     style={{
                       borderLeft:
-                        index == TermsArr.length - 1
+                        index === TermsArr.length - 1
                           ? "4px solid #A52323"
                           : "0",
                       paddingLeft:
-                        TermsArr.length - 1 == index ? "0.6rem" : "0",
+                        TermsArr.length - 1 === index ? "0.6rem" : "0",
                     }}
                   >
                     {Details.Heading}
