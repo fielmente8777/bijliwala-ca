@@ -17,6 +17,7 @@ import useScrollTop from "../../components/useTopScroll";
 
 import HomeBanner from "./components/HomeBanner";
 import AboutCompnent from "../../components/HeroSections/AboutCompnent";
+import OurService from "../../components/OurService";
 
 const Home = () => {
   useScrollTop();
@@ -82,6 +83,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <OurService />
 
       {/* Video Section***** */}
       <section className="layout-section">

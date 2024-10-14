@@ -50,8 +50,8 @@ const AboutCompnent = ({ Details, width = "" }) => {
 
               {Details.Icon && (
                 <div className="flex gap-5 items-center mt-8">
-                  <div className="border border-[#62513e] rounded-full w-[60px] aspect-square flex justify-center items-center ">
-                    <div className="w-[60px] relative aspect-[4/2.5]">
+                  <div className="border border-[#62513e] rounded-full w-[65px] py-6 aspect-square flex justify-center items-center ">
+                    <div className="w-[60px] relative aspect-[4/2.2] p-2">
                       <img
                         src={Details.Icon}
                         alt="icon"
