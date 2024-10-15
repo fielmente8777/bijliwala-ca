@@ -15,7 +15,7 @@ const AboutCompnent = ({ Details, width = "" }) => {
           <img
             src={Details.Image}
             alt={Details.Heading1}
-            className="w-full h-full"
+            className="w-full h-full object-left object-cover"
           />
         </LazyLoad>
         <div className="col-span-3 flex flex-col justify-center">

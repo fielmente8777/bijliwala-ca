@@ -1,6 +1,7 @@
 import React from "react";
 
-
+import SEOVideo from "../../../components/SEOVideo";
+import Video from "../../../assets/Bijliwala-Construction.mp4";
 import { MdArrowRightAlt } from "react-icons/md";
 
 import { Link } from "react-router-dom";
@@ -14,7 +15,7 @@ const HomeBanner = () => {
         <div className="max-w-[1030px]">
 
           <div className="md:h-[630px] h-[280px] lg:w-[1030px] ">
-            <ReactPlayer
+            {/* <ReactPlayer
               width={"100%"}
               height={"100%"}
               url='https://www.youtube.com/embed/QDPXrp9dCQI'
@@ -24,7 +25,8 @@ const HomeBanner = () => {
               muted={true}
               Autoplay={true}
               AllowCommunication={true}
-            />
+            /> */}
+            <SEOVideo src={Video} muted={true} autoPlay={true} controls={false} />
           </div>
         </div>
 

@@ -18,6 +18,7 @@ import useScrollTop from "../../components/useTopScroll";
 import HomeBanner from "./components/HomeBanner";
 import AboutCompnent from "../../components/HeroSections/AboutCompnent";
 import OurService from "../../components/OurService";
+import Insta from "../../components/Insta";
 
 const Home = () => {
   useScrollTop();
@@ -84,7 +85,12 @@ const Home = () => {
         </div>
       </section>
 
-      <OurService />
+      <OurService Details={{
+        Button: {
+          Name: "GET IN TOUCH",
+          Src: "/Contact",
+        },
+      }} />
 
       {/* Video Section***** */}
       <section className="layout-section">
@@ -120,6 +126,7 @@ const Home = () => {
         </div>
       </section>
 
+      <Insta />
       {/* Brands Section***** */}
       <section className="layout-section">
         <SectionHeading

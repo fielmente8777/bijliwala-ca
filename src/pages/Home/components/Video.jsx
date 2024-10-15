@@ -2,6 +2,8 @@ import React from "react";
 import videoPreviewImage from "../../../assets/Images/videioprevImage.png";
 import { MdOutlinePlayCircleOutline } from "react-icons/md";
 import ReactPlayer from 'react-player/youtube'
+import SEOVideo from "../../../components/SEOVideo";
+import Video from "../../../assets/Bijliwala-Construction.mp4";
 const VideoSection = () => {
 
 
@@ -14,7 +16,8 @@ const VideoSection = () => {
         backgroundSize: "cover",
       }}
     >
-      <ReactPlayer
+      <SEOVideo src={Video} muted={true} autoPlay={true} controls={false} />
+      {/* <ReactPlayer
         width={"1630px"}
         height={"100%"}
         // className="w-[1030px] max-md:w-full h-[100%]"
@@ -24,7 +27,7 @@ const VideoSection = () => {
         controls={true}
         muted={true}
         Autoplay={true}
-      />
+      /> */}
       {/* <iframe
         className="w-[1600px] max-md:w-full h-[100%]"
         src="https://www.youtube.com/embed/QDPXrp9dCQI?loop=1&autoplay=1&mute=1&vq=hd1080"
