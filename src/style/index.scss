@@ -234,8 +234,8 @@ input::-webkit-inner-spin-button {
       }
     }
   }
-  .swiper-button-disable {
-    opacity: 0;
+  .swiper-button-disabled {
+    display: none;
   }
 }
 
