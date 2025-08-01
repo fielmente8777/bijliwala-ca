@@ -126,7 +126,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Insta />
+      {/* <Insta /> */}
       {/* Brands Section***** */}
       <section className="layout-section">
         <SectionHeading

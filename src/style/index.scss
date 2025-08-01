@@ -155,9 +155,11 @@ input::-webkit-inner-spin-button {
   font-weight: 500;
 
   border: 1.8px solid #8e7861;
+
   &:active {
     scale: 0.9;
   }
+
   border: 1.8px solid #8e7861;
 
   &:active {
@@ -206,18 +208,23 @@ input::-webkit-inner-spin-button {
 }
 
 .insta {
+
   .swiper-button-prev,
   .swiper-button-next {
     width: 5.5rem;
     height: 5rem;
-    background-color: rgba(255, 255, 255); /* Semi-transparent background */
-    color: #0d0120; /* Default icon color */
-    
+    background-color: rgba(255, 255, 255);
+    /* Semi-transparent background */
+    color: #0d0120;
+    /* Default icon color */
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:hover {
-      background-color: rgba(0, 0, 0); /* Darker on hover */
+      background-color: rgba(0, 0, 0);
+      /* Darker on hover */
       color: #eeeeee;
     }
 
@@ -225,6 +232,7 @@ input::-webkit-inner-spin-button {
       font-weight: 900;
       font-size: 2rem;
     }
+
     @media screen and (max-width: 768px) {
       width: 1.5rem;
       height: 1.5rem;
@@ -234,18 +242,22 @@ input::-webkit-inner-spin-button {
       }
     }
   }
+
   .swiper-button-disabled {
     display: none;
   }
 }
 
-.insta{
+.insta {
   .swiper-button-prev {
     left: -2rem;
-    border-radius: 0 50%  50% 0; /* Make the buttons circular */
+    border-radius: 0 50% 50% 0;
+    /* Make the buttons circular */
   }
+
   .swiper-button-next {
     right: -2rem;
-    border-radius: 50% 0 0 50%  ; /* Make the buttons circular */
+    border-radius: 50% 0 0 50%;
+    /* Make the buttons circular */
   }
 }
