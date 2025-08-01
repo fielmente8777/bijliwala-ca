@@ -1,43 +1,35 @@
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
-
-  const host = "https://eazotel.eazotel.com/api/dashboard/editnewsletter"
+  const host = "https://eazotel.eazotel.com/api/dashboard/editnewsletter";
 
   const [email, setEmail] = useState();
 
   useEffect(() => {
-    setEmail("")
-  })
-
+    setEmail("");
+  });
 
   const handleNewsletter = async () => {
-
     const data = {
-      "Domain": 'bijliwala',
-      "email": email,
-    }
+      Domain: "bijliwala",
+      email: email,
+    };
     try {
       const response = await fetch(host, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
-
     } catch (error) {
       console.log(error);
-    };
+    }
 
     setEmail("");
-  }
-
-
+  };
 
   return (
     <footer className="bg-[#1B1B1B] layout-section !pb-5">
@@ -68,7 +60,10 @@ const Footer = () => {
                       className="shrink-0 w-7 aspect-square"
                       alt="logo"
                     />
-                    <Link to="https://www.google.com/maps/place/BIJLIWALA+LTD./@43.794234,-79.6812453,15z/data=!4m6!3m5!1s0x882b23ae3fd8488b:0x551f69fc56aa7472!8m2!3d43.794234!4d-79.6812453!16s%2Fg%2F11s66b595l?entry=ttu" target="_blank">
+                    <Link
+                      to="https://www.google.com/maps/place/BIJLIWALA+LTD./@43.794234,-79.6812453,15z/data=!4m6!3m5!1s0x882b23ae3fd8488b:0x551f69fc56aa7472!8m2!3d43.794234!4d-79.6812453!16s%2Fg%2F11s66b595l?entry=ttu"
+                      target="_blank"
+                    >
                       <p className="text-[1.5rem]">
                         219 Gardenbrooke Trail, Brampton, Ontario, L6P3C9
                       </p>{" "}
@@ -82,7 +77,9 @@ const Footer = () => {
                       alt="logo"
                     />
                     <div className="  flex items-center">
-                      <Link to="tel:+14164077755" className="text-[1.5rem]">416-407-7755</Link>
+                      <Link to="tel:+14164077755" className="text-[1.5rem]">
+                        416-407-7755
+                      </Link>
                     </div>
                   </div>
                   <div className="flex gap-3 mt-4">
@@ -93,7 +90,10 @@ const Footer = () => {
                       alt="logo"
                     />
                     <div className="grow  flex items-center">
-                      <Link to="mailto:lagancontractor@gmail.com" className="text-[1.5rem]">
+                      <Link
+                        to="mailto:lagancontractor@gmail.com"
+                        className="text-[1.5rem]"
+                      >
                         lagancontractor@gmail.com{" "}
                       </Link>
                     </div>
@@ -193,7 +193,11 @@ const Footer = () => {
                       />
                     </svg>
                   </div> */}
-                  <Link to="https://www.instagram.com/bijliwala_contracting_canada/" target="_blank" className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300">
+                  <Link
+                    to="https://www.instagram.com/bijliwala_contracting_canada/"
+                    target="_blank"
+                    className="justify-center p-4 rounded-[50%] border border-solid border-white border-opacity-10  hover:bg-[#8E7861] transition-colors duration-300"
+                  >
                     <svg
                       width="12"
                       height="12"
@@ -264,26 +268,29 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div >
+      </div>
 
       {/* Phone******** */}
-      <Link Link
+      <Link
+        Link
         to={`tel:${4164077755}`}
         target="_blank"
-        className="max-md:hidden whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+        className="whatsapp-button inline-block fixed bottom-[25px] left-[20px] w-[50px] h-[50px] bg-[#806344] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
-        <span className="sr-only">what's app</span> <FaPhone className="transform rotate-[100deg]" />
-      </Link >
+        <span className="sr-only">what's app</span>{" "}
+        <FaPhone className="transform rotate-[100deg]" />
+      </Link>
 
       {/* Whats app******** */}
-      <Link Link
+      <Link
+        Link
         to={`https://wa.me/${+14164077755}`}
         target="_blank"
-        className="whatsapp-button inline-block fixed bottom-[20px] right-[20px] w-[50px] h-[50px] bg-[#4DC251] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
+        className="whatsapp-button inline-block fixed bottom-[90px] left-[20px] w-[50px] h-[50px] bg-[#4DC251] p-[12px]  rounded-full text-white z-10 text-[25px] overflow-hidden"
       >
         <span className="sr-only">what's app</span> <FaWhatsapp />
-      </Link >
-    </footer >
+      </Link>
+    </footer>
   );
 };
 
