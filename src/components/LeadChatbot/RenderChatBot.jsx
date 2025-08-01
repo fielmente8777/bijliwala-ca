@@ -10,7 +10,7 @@ const RenderChatBot = () => {
   });
 
   const [chatbotData, setChatbotData] = useState({
-    domain: " bijliwala",
+    domain: "bijliwala",
     welcomeMessage: "Welcome to Bijliwala! How may we help you today?",
     thankYouMessage:
       "Thank you so much for filling up the details, one of our representative will speak to you as soon as possible!",
