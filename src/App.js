@@ -15,7 +15,7 @@ function App() {
       {/* <div className="scroll-watcher"></div> */}
 
       <Navbar />
-      <RenderChatBot />
+      {/* <RenderChatBot /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
