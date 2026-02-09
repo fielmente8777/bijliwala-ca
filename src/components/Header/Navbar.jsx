@@ -69,7 +69,7 @@ const Navbar = () => {
                   to={Links.src}
                   style={{
                     borderRight:
-                      index != Nav_Links.length - 1
+                      index !== Nav_Links.length - 1
                         ? "2px solid #473C30"
                         : "0px solid #473C30",
                     paddingRight: "3rem",

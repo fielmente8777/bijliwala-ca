@@ -9,7 +9,7 @@ const Footer = () => {
 
   useEffect(() => {
     setEmail("");
-  });
+  }, []);
 
   const handleNewsletter = async () => {
     const data = {
@@ -17,7 +17,7 @@ const Footer = () => {
       email: email,
     };
     try {
-      const response = await fetch(host, {
+      await fetch(host, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
