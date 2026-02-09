@@ -244,9 +244,12 @@ const Footer = () => {
               <div className="flex md:text-[1.5rem] text-[1.3rem]">
                 <p>
                   Design & Developed by{" "}
-                  <Link to="https://eazotel.com/" target="_blank">
-                    Eazotel
+                  <Link to="https://www.fielmente.com/" target="_blank">
+                    Fielmente
                   </Link>
+                  {/* <Link to="https://eazotel.com/" target="_blank">
+                    Eazotel
+                  </Link> */}
                 </p>
               </div>
             </div>
