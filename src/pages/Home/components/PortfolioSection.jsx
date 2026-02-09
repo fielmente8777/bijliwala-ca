@@ -1,6 +1,5 @@
-import React from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import arrowLeft from "../../../assets/svg/arrowleft.svg";
 import arrowRight from "../../../assets/svg/arrowright.svg";

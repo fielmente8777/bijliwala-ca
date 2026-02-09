@@ -1,4 +1,3 @@
-import React from "react";
 
 const OptionButton = ({ option, onClick, accentColor, disabled }) => {
   return (

@@ -1,15 +1,13 @@
-import React, { useState } from "react";
-import Banner from "../../components/PageBanner/Banner";
-import ContactImg from "../../assets/Images/ContactImage.webp";
 import axios from "axios";
+import { useState } from "react";
 
-import { FaUser, FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaUser } from "react-icons/fa";
+import { FaLocationDot, FaMessage } from "react-icons/fa6";
 import { IoMailOpen } from "react-icons/io5";
-import { FaLocationDot, FaMessage, aMessage } from "react-icons/fa6";
 
 import { MdArrowRightAlt } from "react-icons/md";
-import useScrollTop from "../../components/useTopScroll";
 import { Link } from "react-router-dom";
+import useScrollTop from "../../components/useTopScroll";
 
 export const Contact = () => {
   const [userName, setUserName] = useState("");
@@ -227,6 +225,7 @@ export const Contact = () => {
       <section className="layout-section">
         <div className="max-width">
           <iframe
+            title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191307.21536761077!2d-79.74097138364637!3d43.84187455426463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b233b75b02939%3A0x4b34e9570f59b0a!2s219%20Gardenbrooke%20Trail%2C%20Brampton%2C%20ON%20L6P%203C9%2C%20Canada!5e0!3m2!1sen!2sin!4v1710394380717!5m2!1sen!2sin"
             width="100%"
             height="450"

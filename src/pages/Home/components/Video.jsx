@@ -1,9 +1,6 @@
-import React from "react";
-import videoPreviewImage from "../../../assets/Images/videioprevImage.png";
-import { MdOutlinePlayCircleOutline } from "react-icons/md";
-import ReactPlayer from 'react-player/youtube'
-import SEOVideo from "../../../components/SEOVideo";
 import Video from "../../../assets/Bijliwala-Construction.mp4";
+import videoPreviewImage from "../../../assets/Images/videioprevImage.png";
+import SEOVideo from "../../../components/SEOVideo";
 const VideoSection = () => {
 
 

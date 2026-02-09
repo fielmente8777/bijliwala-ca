@@ -1,4 +1,3 @@
-import React from "react";
 
 const SectionHeading = ({ Heading1, Heading2, SPAN }) => {
   return (

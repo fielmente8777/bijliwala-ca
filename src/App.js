@@ -7,7 +7,6 @@ import Home from "./pages/Home/Home";
 import OurWork from "./pages/OurWrok/OurWork";
 import { Privacy } from "./pages/Privacy/Privacy";
 import Terms from "./pages/Terms/Terms";
-import RenderChatBot from "./components/LeadChatbot/RenderChatBot";
 
 function App() {
   return (

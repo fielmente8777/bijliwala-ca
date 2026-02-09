@@ -1,13 +1,12 @@
-import React from "react";
 // import { HomeBanner } from "./components/HomeBanner";
 
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
-import ContactSection from "./components/ContactSection";
 import Testimonal from "../../components/Testimonal/Testimonal";
 import BrandSection from "./components/BrandSection";
+import ContactSection from "./components/ContactSection";
 import ExpertiseSection from "./components/ExpertiseSection";
-import VideoSection from "./components/Video";
 import PortfolioSection from "./components/PortfolioSection";
+import VideoSection from "./components/Video";
 
 import HeroImage from "../../assets/Images/HeroImage.webp";
 import HeroIcon from "../../assets/messure.svg";
@@ -15,10 +14,9 @@ import HeroIcon from "../../assets/messure.svg";
 
 import useScrollTop from "../../components/useTopScroll";
 
-import HomeBanner from "./components/HomeBanner";
 import AboutCompnent from "../../components/HeroSections/AboutCompnent";
 import OurService from "../../components/OurService";
-import Insta from "../../components/Insta";
+import HomeBanner from "./components/HomeBanner";
 
 const Home = () => {
   useScrollTop();

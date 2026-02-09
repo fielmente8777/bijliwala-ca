@@ -1,7 +1,6 @@
-import React from "react";
-import Banner from "../../components/PageBanner/Banner";
 import BlogImg from "../../assets/Images/ContactImage.webp";
 import BlogsCard from "../../components/Cards/BlogsCard";
+import Banner from "../../components/PageBanner/Banner";
 
 const Blogs = [
   {

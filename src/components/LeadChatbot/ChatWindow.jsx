@@ -1,10 +1,10 @@
 // src/components/ChatWindow.jsx
-import React, { ChangeEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
-import { IoIosSend } from "react-icons/io";
 import "react-datepicker/dist/react-datepicker.css";
-import "./input-date.scss";
+import { IoIosSend } from "react-icons/io";
 import { countries } from "./constant";
+import "./input-date.scss";
 
 const ChatWindow = ({
   messages,

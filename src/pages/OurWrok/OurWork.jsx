@@ -1,24 +1,21 @@
-import React from "react";
-import "./Work.scss";
-import Banner from "../../components/PageBanner/Banner";
-import WorkImg from "../../assets/Images/ContactImage.webp";
+import LazyLoad from 'react-lazy-load';
+import workImg3 from "../../assets/Images/portfolio1.png";
 import workImg1 from "../../assets/Images/portfolio2.webp";
 import workImg2 from "../../assets/Images/portfolio3.webp";
-import workImg3 from "../../assets/Images/portfolio1.png";
-import LazyLoad from 'react-lazy-load';
+import "./Work.scss";
 
 import { MdArrowRightAlt } from "react-icons/md";
 
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
+import { Link } from "react-router-dom";
 import arrowLeft from "../../assets/svg/arrowleft.svg";
 import arrowRight from "../../assets/svg/arrowright.svg";
-import { Link } from "react-router-dom";
 import useScrollTop from "../../components/useTopScroll";
 
 
-import ReactPlayer from 'react-player/youtube'
+import ReactPlayer from 'react-player/youtube';
 
 
 const Wroks = [

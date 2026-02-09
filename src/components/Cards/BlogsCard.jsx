@@ -1,4 +1,3 @@
-import React from "react";
 import { MdArrowRightAlt } from "react-icons/md";
 
 const BlogsCard = () => {

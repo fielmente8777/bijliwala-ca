@@ -1,4 +1,3 @@
-import React from "react";
 import LazyLoad from "react-lazy-load";
 
 const Card2 = ({ Details }) => {

@@ -1,8 +1,7 @@
-import React from 'react'
-import { Branding, BuildingInspections, BuildingPermits, BuildRenovations, Conceptdesigning, DesignBuilt, ExceptionalIcon, ZoningApplications } from '../icons/icons'
-import Background from '../assets/Vector2.png'
-import { Link } from 'react-router-dom'
 import { MdArrowRightAlt } from 'react-icons/md'
+import { Link } from 'react-router-dom'
+import Background from '../assets/Vector2.png'
+import { Branding, BuildingInspections, BuildingPermits, BuildRenovations, Conceptdesigning, DesignBuilt, ExceptionalIcon, ZoningApplications } from '../icons/icons'
 
 const OurService = ({Details}) => {
     const data = [

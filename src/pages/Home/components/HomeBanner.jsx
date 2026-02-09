@@ -1,11 +1,9 @@
-import React from "react";
 
-import SEOVideo from "../../../components/SEOVideo";
-import Video from "../../../assets/Bijliwala-Construction.mp4";
 import { MdArrowRightAlt } from "react-icons/md";
+import Video from "../../../assets/Bijliwala-Construction.mp4";
+import SEOVideo from "../../../components/SEOVideo";
 
 import { Link } from "react-router-dom";
-import ReactPlayer from 'react-player/lazy'
 const HomeBanner = () => {
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,8 +8,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Grid, Navigation, Pagination } from 'swiper/modules';
-import { Link } from 'react-router-dom';
-import Profile from "../assets/Images/befikre.jpg"
+import Profile from "../assets/Images/befikre.jpg";
 const Insta = () => {
 
     const [posts, setPosts] = useState([]);

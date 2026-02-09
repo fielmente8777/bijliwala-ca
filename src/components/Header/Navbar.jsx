@@ -1,10 +1,7 @@
-import React, { useState } from "react";
-import Logo from "../../assets/logo 2.svg";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import facebook from "../../assets/svg/facebook.svg";
-import bijli from "../../assets/svg/bijli.svg";
+import Logo from "../../assets/logo 2.svg";
 import instagram from "../../assets/svg/instagram.svg";
-import twitter from "../../assets/svg/twitter.svg";
 import { MobileNav } from "./MobileNav";
 
 import { RiMenuFoldFill } from "react-icons/ri";

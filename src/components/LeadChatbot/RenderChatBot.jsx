@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import ChatbotWidget from "./ChatbotWidget";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import ChatbotWidget from "./ChatbotWidget";
 
 const RenderChatBot = () => {
   const [eazbotConfig, setEazbotConfig] = useState({

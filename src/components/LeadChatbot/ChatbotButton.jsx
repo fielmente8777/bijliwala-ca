@@ -1,5 +1,4 @@
 // src/components/ChatbotButton.jsx
-import React from "react";
 
 const ChatbotButton = ({ onClick, clientConfig, theme }) => {
   // const buttonColor = clientConfig?.theme?.primary_color || "#3B82F6";

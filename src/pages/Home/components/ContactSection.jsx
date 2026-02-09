@@ -1,9 +1,9 @@
-import React, { useState } from "react";
 import axios from "axios";
+import { useState } from "react";
 
-import { FaUser, FaPhoneAlt } from "react-icons/fa";
-import { IoMailOpen } from "react-icons/io5";
+import { FaPhoneAlt, FaUser } from "react-icons/fa";
 import { FaLocationDot, FaMessage } from "react-icons/fa6";
+import { IoMailOpen } from "react-icons/io5";
 
 import { MdArrowRightAlt } from "react-icons/md";
 

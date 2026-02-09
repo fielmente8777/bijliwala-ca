@@ -1,8 +1,7 @@
-import React from "react";
-import { Card1 } from "../../../components/Cards/Card1";
-import floor from "../../../assets/svg/floor.svg";
 import electric from "../../../assets/svg/electric.svg";
+import floor from "../../../assets/svg/floor.svg";
 import furniture from "../../../assets/svg/furniture.svg";
+import { Card1 } from "../../../components/Cards/Card1";
 
 const Details = [
   {

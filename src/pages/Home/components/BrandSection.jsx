@@ -1,17 +1,16 @@
-import React from "react";
+import LazyLoad from "react-lazy-load";
+import Brand8 from "../../../assets/Images/befikre.jpg";
 import Brand1 from "../../../assets/Images/brand1.webp";
 import Brand2 from "../../../assets/Images/brand2.webp";
 import Brand3 from "../../../assets/Images/brand3.webp";
 import Brand4 from "../../../assets/Images/brand4.webp";
 import Brand5 from "../../../assets/Images/brand5.webp";
 import Brand6 from "../../../assets/Images/brand6.webp";
-import Brand7 from "../../../assets/Images/ullo.jpg"
-import Brand8 from "../../../assets/Images/befikre.jpg"
-import Brand9 from "../../../assets/Images/ikbar.png"
-import LazyLoad from "react-lazy-load";
+import Brand9 from "../../../assets/Images/ikbar.png";
+import Brand7 from "../../../assets/Images/ullo.jpg";
 
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 
 import "swiper/css";

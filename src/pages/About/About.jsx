@@ -1,26 +1,20 @@
-import React, { useEffect } from "react";
-import AboutImg from "../../assets/Images/ContactImage.webp";
-import Banner from "../../components/PageBanner/Banner";
-import HeroSection from "../../components/HeroSections/HeroSection";
 import HeroImage from "../../assets/Images/HeroImage.webp";
 import { Card1 } from "../../components/Cards/Card1";
 import Card2 from "../../components/Cards/Card2";
-import SectionHeading from "../../components/SectionHeading/SectionHeading";
-import Testimonal from "../../components/Testimonal/Testimonal";
-import BrandSection from "../Home/components/BrandSection";
+import HeroSection from "../../components/HeroSections/HeroSection";
 
-import listen from "../../assets/svg/listen.svg";
-import plan from "../../assets/svg/plan.svg";
 import build from "../../assets/svg/build.svg";
 import execute from "../../assets/svg/execute.svg";
+import listen from "../../assets/svg/listen.svg";
+import plan from "../../assets/svg/plan.svg";
 
 import Img from "../../assets/Images/TeamImg1.png";
 import Img2 from "../../assets/Images/Teamimg2.png";
 import Img3 from "../../assets/Images/Teamimg3.png";
 import Img4 from "../../assets/Images/Teamimg4.png";
 
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import arrowLeft from "../../assets/svg/arrowleft.svg";
 import arrowRight from "../../assets/svg/arrowright.svg";
